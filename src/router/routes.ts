@@ -3,8 +3,8 @@ export enum Routes {
   home = "/home",
   about = "/about",
   products = "/products",
-  detail = "/products/detail",
+  productdetail = "/products/detail",
   partners = "/partners",
   partnersdetail = "/partners/detail",
-  contact = "/contact"
+  contact = "/contact",
 }
