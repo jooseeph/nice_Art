@@ -1,0 +1,109 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "title": "Daşınmaz Əmlak Krediti",
+      "description": "Information about loan. Volutpat faucibus enim risus vulputate nisl sed sed. Facilisis pellentesque id tristique.",
+      "img": "assets/images/statics/vector.svg",
+      "credit_title": "Kredit total Id duis id turpis mi quisque. Nulla.",
+      "credit_description": "hhuhghre uihuige hihrhg hhrthrhht  Vehicula elit est, neque non mattis pharetra, urna lectus magnis. Ultricies tellus adipiscing a sem ultrices eu pulvinar. Urna egestas est aliquet facilisis elit sit. Massa libero turpis facilisi mattis sit ac consectetur malesuada et. Urna, orci arcu senectus mattis nam euismod cum cursus. Enim nunc quis commodo leo libero diam.",
+      "credit_information": [
+        {
+          "credit_infor_title": "Kreditin məbləği  (AZN)",
+          "credit_infor_description": "Min. 5 000 - max. 500 000",
+          "credit_infor_icon": "assets/images/statics/credit_icon_1"
+        },
+        {
+          "credit_infor_title": "Kreditin ilkin ödənişi (%)",
+          "credit_infor_description": "Min. 15",
+          "credit_infor_icon": "assets/images/statics/credit_icon_2"
+        },
+        {
+          "credit_infor_title": "Kreditin faiz dərəcəsi  (%)",
+          "credit_infor_description": "Min. 10",
+          "credit_infor_icon": "assets/images/statics/credit_icon_3"
+        },
+        {
+          "credit_infor_title": "Kreditin müddəti  (ay)",
+          "credit_infor_description": "Min. 6 - max. 120",
+          "credit_infor_icon": "assets/images/statics/credit_icon_4"
+        },
+        {
+          "credit_infor_title": "Kreditin rəsmiləşdirilməsi üçün komissiya haqqı  (%)",
+          "credit_infor_description": "Min. 1",
+          "credit_infor_icon": "assets/images/statics/credit_icon_5"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "title": "Lorem Ipsum",
+      "description": "Information about loan. Volutpat faucibus enim risus vulputate nisl sed sed. Facilisis pellentesque id tristique.",
+      "img": "assets/images/statics/product.svg",
+      "credit_title": "Id duis id turpis mi quisque. Nulla.",
+      "credit_description": "Vehicula elit est, neque non mattis pharetra, urna lectus magnis. Ultricies tellus adipiscing a sem ultrices eu pulvinar. Urna egestas est aliquet facilisis elit sit. Massa libero turpis facilisi mattis sit ac consectetur malesuada et. Urna, orci arcu senectus mattis nam euismod cum cursus. Enim nunc quis commodo leo libero diam. ",
+      "credit_information": [
+        {
+          "credit_infor_title": "Kreditin məbləği  (AZN)",
+          "credit_infor_description": "Min. 5 000 - max. 500 000",
+          "credit_infor_icon": "assets/images/statics/credit_icon_1"
+        },
+        {
+          "credit_infor_title": "Kreditin ilkin ödənişi (%)",
+          "credit_infor_description": "Min. 15",
+          "credit_infor_icon": "assets/images/statics/credit_icon_2"
+        },
+        {
+          "credit_infor_title": "Kreditin faiz dərəcəsi  (%)",
+          "credit_infor_description": "Min. 10",
+          "credit_infor_icon": "assets/images/statics/credit_icon_3"
+        },
+        {
+          "credit_infor_title": "Kreditin müddəti  (ay)",
+          "credit_infor_description": "Min. 6 - max. 120",
+          "credit_infor_icon": "assets/images/statics/credit_icon_4"
+        },
+        {
+          "credit_infor_title": "Kreditin rəsmiləşdirilməsi üçün komissiya haqqı  (%)",
+          "credit_infor_description": "Min. 1",
+          "credit_infor_icon": "assets/images/statics/credit_icon_5"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "title": "Product kredit ",
+      "description": "Information about loan. Volutpat faucibus enim risus vulputate nisl sed sed. Facilisis pellentesque id tristique.",
+      "img": "assets/images/statics/product.svg",
+      "credit_title": "Id duis id turpis mi quisque. Nulla.556",
+      "credit_description": "hhuhghre uihuige hihrhg hhrthrhht Information about loan. Volutpat faucibus enim risus vulputate nisl sed sed. Facilisis pellentesque id tristique. Information about loan. Volutpat faucibus enim risus vulputate nisl sed sed. Facilisis pellentesque id tristique.",
+      "credit_information": [
+        {
+          "credit_infor_title": "Kreditin məbləği  (AZN)",
+          "credit_infor_description": "Min. 5 000 - max. 500 000",
+          "credit_infor_icon": "assets/images/statics/credit_icon_1"
+        },
+        {
+          "credit_infor_title": "Kreditin ilkin ödənişi (%)",
+          "credit_infor_description": "Min. 15",
+          "credit_infor_icon": "assets/images/statics/credit_icon_2"
+        },
+        {
+          "credit_infor_title": "Kreditin faiz dərəcəsi  (%)",
+          "credit_infor_description": "Min. 10",
+          "credit_infor_icon": "assets/images/statics/credit_icon_3"
+        },
+        {
+          "credit_infor_title": "Kreditin müddəti  (ay)",
+          "credit_infor_description": "Min. 6 - max. 120",
+          "credit_infor_icon": "assets/images/statics/credit_icon_4"
+        },
+        {
+          "credit_infor_title": "Kreditin rəsmiləşdirilməsi üçün komissiya haqqı  (%)",
+          "credit_infor_description": "Min. 1",
+          "credit_infor_icon": "assets/images/statics/credit_icon_5"
+        }
+      ]
+    }
+  ]
+}
