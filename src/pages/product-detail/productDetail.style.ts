@@ -4,11 +4,20 @@ import { rem } from "assets/styles/abstracts/functions";
 import { createUseStyles } from "react-jss";
 
 const style = {
-  productDetailSec: {},
+  productDetailSec: {zIndex:'999'},
+  overlay: {
+  position: 'absolute',
+  top: 0,
+  left: 0,
+  width: '100%',
+  height: rem(575),
+  backgroundColor: '#FAFFF3',
+  zIndex:'-1', /* Yeşil renk ve yarı saydam (transparan) */
+},
   productDetail: {
     padding: `${rem(93) + " " + rem(0) + " " + rem(125) + " " + rem(0)}`,
   },
-  creditAbout: {marginBottom: rem(44)},
+  creditAbout: { marginBottom: rem(44) },
   title: {
     fontFamily: fonts.fontBold,
     fontSize: rem(60),
@@ -32,6 +41,8 @@ const style = {
     letterSpacing: 0,
     textAlign: "left",
     color: colors.titleGreen,
+    display: "inline-block",
+    padding: 0,
     marginTop: rem(160),
   },
   credit_about_title: {

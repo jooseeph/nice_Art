@@ -2,11 +2,11 @@
   "products": [
     {
       "id": 1,
-      "title": "Daşınmaz Əmlak",
+      "title": "Daşınmaz Əmlak Krediti",
       "description": "Information about loan. Volutpat faucibus enim risus vulputate nisl sed sed. Facilisis pellentesque id tristique.",
       "img": "assets/images/statics/vector.svg",
-      "credit_title": "Kredit total",
-      "credit_description": "hhuhghre uihuige hihrhg hhrthrhht",
+      "credit_title": "Kredit total Id duis id turpis mi quisque. Nulla.",
+      "credit_description": "hhuhghre uihuige hihrhg hhrthrhht  Vehicula elit est, neque non mattis pharetra, urna lectus magnis. Ultricies tellus adipiscing a sem ultrices eu pulvinar. Urna egestas est aliquet facilisis elit sit. Massa libero turpis facilisi mattis sit ac consectetur malesuada et. Urna, orci arcu senectus mattis nam euismod cum cursus. Enim nunc quis commodo leo libero diam.",
       "credit_information": [
         {
           "credit_infor_title": "Kreditin məbləği  (AZN)",
@@ -40,8 +40,8 @@
       "title": "Lorem Ipsum",
       "description": "Information about loan. Volutpat faucibus enim risus vulputate nisl sed sed. Facilisis pellentesque id tristique.",
       "img": "assets/images/statics/product.svg",
-      "credit_title": "Kredit total",
-      "credit_description": "hhuhghre uihuige hihrhg hhrthrhht",
+      "credit_title": "Id duis id turpis mi quisque. Nulla.",
+      "credit_description": "Vehicula elit est, neque non mattis pharetra, urna lectus magnis. Ultricies tellus adipiscing a sem ultrices eu pulvinar. Urna egestas est aliquet facilisis elit sit. Massa libero turpis facilisi mattis sit ac consectetur malesuada et. Urna, orci arcu senectus mattis nam euismod cum cursus. Enim nunc quis commodo leo libero diam. ",
       "credit_information": [
         {
           "credit_infor_title": "Kreditin məbləği  (AZN)",
@@ -75,8 +75,8 @@
       "title": "Product kredit ",
       "description": "Information about loan. Volutpat faucibus enim risus vulputate nisl sed sed. Facilisis pellentesque id tristique.",
       "img": "assets/images/statics/product.svg",
-      "credit_title": "Kredit total",
-      "credit_description": "hhuhghre uihuige hihrhg hhrthrhht",
+      "credit_title": "Id duis id turpis mi quisque. Nulla.556",
+      "credit_description": "hhuhghre uihuige hihrhg hhrthrhht Information about loan. Volutpat faucibus enim risus vulputate nisl sed sed. Facilisis pellentesque id tristique. Information about loan. Volutpat faucibus enim risus vulputate nisl sed sed. Facilisis pellentesque id tristique.",
       "credit_information": [
         {
           "credit_infor_title": "Kreditin məbləği  (AZN)",

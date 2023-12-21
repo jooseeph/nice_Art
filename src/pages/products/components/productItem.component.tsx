@@ -10,8 +10,6 @@ const ProductItemComponent = () => {
   const classes = useProductItemStyles();
   const translate = useLocalization();
   const { data } = useProducts();
-  console.log(data);
-
   return (
     <>
       {data &&
@@ -61,7 +59,7 @@ const ProductItemComponent = () => {
                   </div>
                 </div>
                 <div className={`${classes.productDetailBtn} mt-40`}>
-                  <NavLink to={Routes.productdetail}>
+                  <NavLink to={`${Routes.productdetail}/${product.id}`}>
                     <button className={classes.detailBtn}>
                       <span className="mr-8">
                         {translate("productDetailBtn")}
