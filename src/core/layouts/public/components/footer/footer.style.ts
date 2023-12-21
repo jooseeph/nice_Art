@@ -106,7 +106,7 @@ const styles = {
     color: colors.copyRightTxt,
     fontSize: rem(18),
     lineHeight: rem(30),
-    fontWeight: '400',
+    fontWeight: "400",
   },
   footMenuItem: {
     textDecoration: "none",
@@ -117,9 +117,9 @@ const styles = {
     color: colors.footText,
   },
   rightReserv: {
-    textDecoration: 'none',
+    textDecoration: "none",
     borderBottom: `1px solid ${colors.navActiveText} `,
-    fontWeight: '400',
+    fontWeight: "400",
     fontSize: rem(18),
     color: colors.navActiveText,
     lineHeight: rem(30),
