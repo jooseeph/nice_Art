@@ -16,7 +16,7 @@ const PartnersCardComponent = ({
   return (
     <div className={`col-lg-3 col-sm-6 ${classes.card}`} onClick={onClick}>
       <div className={classes.imageAndTitle}>
-        <img src={imageSrc} alt={title} className={classes.image} />
+        <img src={imageSrc} alt={title}  />
         <h2 className={classes.title}>{title}</h2>
       </div>
       <p className={classes.description}>{description}</p>

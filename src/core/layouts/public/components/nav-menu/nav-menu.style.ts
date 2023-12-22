@@ -6,14 +6,13 @@ const styles = {
   navMenu: {
     width: "100%",
     textAlign: "end",
+    "& ul": { display: "flex", justifyContent: "space-end" },
     "@media (max-width: 768px)": {
       navMenu: {
         width: "100%",
-        height: "100vh",
       },
       "& ul": {
         width: "100%",
-        height: "100vh",
         flexDirection: "column",
         textAlign: "start",
         background: `${colors.light}`,
@@ -22,12 +21,17 @@ const styles = {
         padding: rem(10) + " " + rem(25),
         top: rem(70),
         right: "-100%",
+        transition: "0.3s ease-in-out",
+      },
+      "& ul li": {
+        marginBottom: rem(10),
       },
     },
   },
   active: {
     display: "flex",
     justifyContent: "end",
+    flexDirection: "row",
   },
   hiden: {
     left: 0,
@@ -38,12 +42,12 @@ const styles = {
     display: "none",
     "@media (max-width: 768px)": {
       display: "block",
+      cursor: "pointer",
       "& svg": { width: rem(30), height: rem(30) },
     },
   },
 };
 
 export const useNavMenuStyles = createUseStyles(styles);
-
 
 
