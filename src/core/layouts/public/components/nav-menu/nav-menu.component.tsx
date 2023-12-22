@@ -1,15 +1,15 @@
-import useLocalization from "assets/lang";
-import { useNavMenuStyles } from "./nav-menu.style";
-import { Routes } from "router/routes";
-import NavMenuItemComponent from "../nav-menu-item/nav-menu-item.component";
-import { generateGuid } from "core/helpers/generate-guid";
-import { IoMenu } from "react-icons/io5";
-import { IoClose } from "react-icons/io5";
-import { useDispatch, useSelector } from "react-redux";
-import { useCallback } from "react";
-import { toggleNavMenu } from "store/store.reducer";
-import { IState } from "store/store";
-import classNames from "classnames";
+import useLocalization from 'assets/lang';
+import { useNavMenuStyles } from './nav-menu.style';
+import { Routes } from 'router/routes';
+import NavMenuItemComponent from '../nav-menu-item/nav-menu-item.component';
+import { generateGuid } from 'core/helpers/generate-guid';
+import { IoMenu } from 'react-icons/io5';
+import { IoClose } from 'react-icons/io5';
+import { useDispatch, useSelector } from 'react-redux';
+import { useCallback } from 'react';
+import { toggleNavMenu } from 'store/store.reducer';
+import { IState } from 'store/store';
+import classNames from 'classnames';
 
 const NavMenuComponent = () => {
   const classes = useNavMenuStyles();
@@ -33,27 +33,27 @@ const NavMenuComponent = () => {
   const items = [
     {
       id: 1,
-      name: translate("home_title"),
+      name: translate('home_title'),
       link: Routes.home,
     },
     {
       id: 2,
-      name: translate("about_title"),
+      name: translate('about_title'),
       link: Routes.about,
     },
     {
       id: 3,
-      name: translate("product_title"),
+      name: translate('product_title'),
       link: Routes.products,
     },
     {
       id: 4,
-      name: translate("partners_title"),
+      name: translate('partners_title'),
       link: Routes.partners,
     },
     {
       id: 5,
-      name: translate("contact_title"),
+      name: translate('contact_title'),
       link: Routes.contact,
     },
   ];
@@ -76,7 +76,3 @@ const NavMenuComponent = () => {
 };
 
 export default NavMenuComponent;
-
-
-
-
