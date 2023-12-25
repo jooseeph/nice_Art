@@ -73,7 +73,7 @@ export const PartnersComponent = () => {
     setSelectedCard(null);
   };
   return (
-    <div className={classes.container}>
+    <div className='container'>
       <div className={`${classes.title} row justify-between`}>
         <div className={`${classes.left} col-md-5`}>
           <h1>Title for Partners or Lorem Ipsum motto</h1>

@@ -2,7 +2,7 @@ import { createUseStyles } from 'react-jss';
 import { rem } from 'assets/styles/abstracts/functions';
 
 const styles = {
-  container: {},
+  
   title: { display: 'flex', marginBottom: rem(60) },
 
   left: {
