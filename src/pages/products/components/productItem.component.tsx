@@ -23,7 +23,7 @@ const ProductItemComponent = () => {
                 </p>
                 <div className={classes.creditDetail}>
                   <div className="row">
-                    <div className="col-md-4 col-sm-6">
+                    <div className="col-md-4 col-6">
                       <label htmlFor="">
                         {product?.credit_information[3].credit_infor_title}
                       </label>
@@ -34,7 +34,7 @@ const ProductItemComponent = () => {
                         }
                       </span>
                     </div>
-                    <div className="col-md-4 col-sm-6">
+                    <div className="col-md-4 col-6">
                       <label htmlFor="">
                         {product?.credit_information[0].credit_infor_title}
                       </label>
@@ -67,9 +67,12 @@ const ProductItemComponent = () => {
                       <FaArrowRight className={classes.rightArrow} />
                     </button>
                   </NavLink>
+                  <div className={`${classes.productImgMobile} d-none`}>
+                    <img src={product_img} alt="product" />
+                  </div>
                 </div>
               </div>
-              <div className="col-md-5 d-flex align-center">
+              <div className="col-md-5 d-flex align-center justify-end">
                 <div className={`${classes.productImg}`}>
                   <img src={product_img} alt="product" />
                 </div>
@@ -82,3 +85,5 @@ const ProductItemComponent = () => {
 };
 
 export default ProductItemComponent;
+
+
