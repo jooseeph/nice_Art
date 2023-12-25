@@ -13,7 +13,8 @@ const colors = {
   titleBlack: "#414D44",
   iconBackground: "#3E6F0005",
   iconDescrip: '#707872',
-
+//sosial icon
+sosialIcon:'#6E9E37',
 };
 
 export default colors;

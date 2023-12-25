@@ -8,9 +8,15 @@ const styles = {
     padding: rem(120) + " " + rem(0) + " " + rem(24) + " " + rem(0),
     backgroundColor: colors.footBackground,
     "& li:last-child $footMenuItem": { marginBottom: rem(0) },
+    "@media(max-width:768px)": {
+      padding: rem(16) + " " + rem(0),
+    },
   },
   marginToprights: {
     marginTop: rem(132),
+    "@media(max-width:768px)": {
+      marginTop: rem(49),
+    },
   },
   footer08: {
     padding: 0,
@@ -87,11 +93,21 @@ const styles = {
       },
     },
   },
+  footerSocial: {
+    display: "flex",
+    marginTop: rem(24),
+    marginBottom: rem(44),
+    "& li a": {
+      color: colors.sosialIcon,
+      marginRight: rem(22),
+      fontSize: rem(18),
+    },
+  },
   footHeading: {
     fontFamily: fonts.fontBold,
     fontSize: rem(20),
     marginBottom: rem(42),
-    // fontWeight: "700",
+    fontWeight: "700",
     lineHeight: rem(22),
   },
   footerTxt: {
@@ -123,8 +139,9 @@ const styles = {
     fontSize: rem(18),
     color: colors.navActiveText,
     lineHeight: rem(30),
-    marginLeft: rem(6),
-    marginRight: rem(6),
+    "@media (max-width:768px)": {
+      fontSize: rem(16),
+    },
   },
   logoImg: {
     display: "flex",

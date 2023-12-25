@@ -5,6 +5,12 @@ import { createUseStyles } from "react-jss";
 
 const styles = {
   products: { marginTop: rem(60) },
+  productDesc: {
+    paddingLeft: rem(100),
+    "@media (max-width:768px)": {
+      paddingLeft: 0,
+    },
+  },
   title: {
     fontFamily: fonts.fontBold,
     fontSize: rem(60),
@@ -15,8 +21,15 @@ const styles = {
     color: colors.titleGreen,
     padding: 0,
     margin: 0,
+    "@media (max-width:768px)": {
+      fontSize: rem(36),
+      fontWeight: "800",
+      lineHeight: rem(48),
+      letterSpacing: rem(0),
+      marginBottom: rem(24),
+    },
   },
-  descripTitleitle: {
+  descripTitle: {
     fontFamily: fonts.fontBold,
     fontSize: rem(44),
     fontWeight: "800",
@@ -25,6 +38,14 @@ const styles = {
     textAlign: "left",
     color: colors.titleBlack,
     marginBottom: rem(10),
+    "@media (max-width:768px)": {
+      fontSize: rem(28),
+      fontWeight: "800",
+      lineHeight: rem(37),
+      letterSpacing: rem(0),
+      textAlign: "left",
+      marginBottom: rem(4),
+    },
   },
   description: {
     fontFamily: fonts.fontBold,
