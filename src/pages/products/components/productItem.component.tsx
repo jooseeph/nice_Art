@@ -23,7 +23,7 @@ const ProductItemComponent = () => {
                 </p>
                 <div className={classes.creditDetail}>
                   <div className="row">
-                    <div className="col-md-4">
+                    <div className="col-md-4 col-sm-6">
                       <label htmlFor="">
                         {product?.credit_information[3].credit_infor_title}
                       </label>
@@ -34,7 +34,7 @@ const ProductItemComponent = () => {
                         }
                       </span>
                     </div>
-                    <div className="col-md-4">
+                    <div className="col-md-4 col-sm-6">
                       <label htmlFor="">
                         {product?.credit_information[0].credit_infor_title}
                       </label>
@@ -45,7 +45,7 @@ const ProductItemComponent = () => {
                         }
                       </span>
                     </div>
-                    <div className="col-md-4">
+                    <div className={`${classes.mobileNone} col-md-4`}>
                       <label htmlFor="">
                         {product?.credit_information[1].credit_infor_title}
                       </label>
@@ -69,7 +69,7 @@ const ProductItemComponent = () => {
                   </NavLink>
                 </div>
               </div>
-              <div className="col-md-5">
+              <div className="col-md-5 d-flex align-center">
                 <div className={`${classes.productImg}`}>
                   <img src={product_img} alt="product" />
                 </div>
