@@ -5,6 +5,7 @@ import { createUseStyles } from "react-jss";
 
 const styles = {
   productItem: {
+    position: "relative",
     background: colors.backgroundProductI,
     padding: `${rem(40) + " " + rem(0) + " " + rem(0) + " " + rem(40)}`,
     marginTop: rem(40),
@@ -18,6 +19,20 @@ const styles = {
       padding: `${rem(16) + " " + rem(0) + " " + rem(16) + " " + rem(16)}`,
       "&:first-child": {
         marginTop: rem(38),
+      },
+    },
+  },
+  productImgMobile: {
+    "@media (max-width: 768px)": {
+      display: "block!important",
+      width: rem(145),
+      height: rem(105),
+      position: "absolute",
+      right: 0,
+      bottom: 0,
+      "& img": {
+        width: "100%",
+        height: "100%",
       },
     },
   },
@@ -43,8 +58,12 @@ const styles = {
   },
   productImg: {
     display: "flex",
-    justifyContent: "end",
-    alignItems: "center",
+    justifyContent: "flex-end",
+    alignItems: "flex-end",
+    position: "relative",
+    "@media (max-width: 768px)": {
+      display: "none",
+    },
     "& img": {
       maxWidth: "100%",
       height: "auto",
@@ -62,14 +81,12 @@ const styles = {
       letterSpacing: rem(0),
       textAlign: "left",
       color: colors.titleBlack,
-      "@media (max-width:768px)": {
-      },
     },
     "& span": {
       display: "block",
       fontFamily: fonts.font,
       fontSize: rem(16),
-      fontWeight: "600",
+      fontWeight: "400",
       lineHeight: rem(22),
       letterSpacing: rem(0),
       textAlign: "left",
