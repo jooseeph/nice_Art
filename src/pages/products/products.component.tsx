@@ -12,8 +12,8 @@ const ProductsComponent = () => {
               Title for Products or Lorem Ipsum motto
             </h1>
           </div>
-          <div className="col-md-7 col-sm-12 p-0 pl-100">
-            <h2 className={classes.descripTitleitle}>
+          <div className={`${classes.productDesc} col-md-7 col-sm-12`}>
+            <h2 className={classes.descripTitle}>
               Lectus mauris pulvinar sit?
             </h2>
             <p className={classes.description}>

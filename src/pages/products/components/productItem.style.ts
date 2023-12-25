@@ -11,6 +11,15 @@ const styles = {
     "&:first-child": {
       marginTop: rem(60),
     },
+    "@media (max-width:1200px)": {
+      padding: `${rem(40) + " " + rem(0) + " " + rem(40) + " " + rem(40)}`,
+    },
+    "@media (max-width:768px)": {
+      padding: `${rem(16) + " " + rem(0) + " " + rem(16) + " " + rem(16)}`,
+      "&:first-child": {
+        marginTop: rem(38),
+      },
+    },
   },
   productItemTitle: {
     fontFamily: fonts.fontBold,
@@ -35,6 +44,11 @@ const styles = {
   productImg: {
     display: "flex",
     justifyContent: "end",
+    alignItems: "center",
+    "& img": {
+      maxWidth: "100%",
+      height: "auto",
+    },
   },
   creditDetail: {
     marginTop: rem(40),
@@ -48,6 +62,8 @@ const styles = {
       letterSpacing: rem(0),
       textAlign: "left",
       color: colors.titleBlack,
+      "@media (max-width:768px)": {
+      },
     },
     "& span": {
       display: "block",
@@ -81,6 +97,11 @@ const styles = {
     letterSpacing: 0,
     textAlign: "left",
     cursor: "pointer",
+  },
+  mobileNone: {
+    "@media (max-width: 768px)": {
+      display: "none",
+    },
   },
   rightArrow: {
     width: rem(24),

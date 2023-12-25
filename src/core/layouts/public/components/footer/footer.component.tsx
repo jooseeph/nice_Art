@@ -1,4 +1,3 @@
-import { environment } from "core/configs/app.config";
 import { useFooterStyles } from "./footer.style";
 import useLocalization from "assets/lang";
 import { NavLink } from "react-router-dom";
@@ -7,10 +6,14 @@ import niceartLogo from "assets/images/statics/niceart.svg";
 import { MdOutlineEmail } from "react-icons/md";
 import { MdOutlineLocalPhone } from "react-icons/md";
 import { CiLocationOn } from "react-icons/ci";
+import { FaFacebookF } from "react-icons/fa";
+import { FaTwitter } from "react-icons/fa";
+import { PiInstagramLogoFill } from "react-icons/pi";
+import { FaYoutube } from "react-icons/fa";
+import { FaLinkedinIn } from "react-icons/fa";
 
 const FooterComponent = () => {
   const classes = useFooterStyles();
-  const projectName = environment.applicationName;
   const date = new Date().getFullYear();
   const translate = useLocalization();
 
@@ -20,7 +23,7 @@ const FooterComponent = () => {
         <div className="row">
           <div className="col-md-12 py-5">
             <div className="row">
-              <div className="col-md-4">
+              <div className="col-lg-3 col-md-4">
                 <div className={classes.logoImg}>
                   <NavLink to={Routes.home}>
                     <img src={niceartLogo} alt="logo" />
@@ -29,44 +32,64 @@ const FooterComponent = () => {
                 <p className={classes.footerTxt}>
                   Lorem ipsum dolor sit amet consectetur adipiscing elit aliquam
                 </p>
-                <ul className="ftco-footer-social p-0">
+                <ul className={classes.footerSocial}>
                   <li className="ftco-animate">
-                    <a
-                      href="#"
+                    <NavLink
+                      to="#"
                       data-toggle="tooltip"
                       data-placement="top"
                       title="Twitter"
                     >
-                      <span className="ion-logo-twitter"></span>
-                    </a>
+                      <FaFacebookF />
+                    </NavLink>
                   </li>
                   <li className="ftco-animate">
-                    <a
-                      href="#"
+                    <NavLink
+                      to="#"
                       data-toggle="tooltip"
                       data-placement="top"
                       title="Facebook"
                     >
-                      <span className="ion-logo-facebook"></span>
-                    </a>
+                      <FaTwitter />
+                    </NavLink>
                   </li>
                   <li className="ftco-animate">
-                    <a
-                      href="#"
+                    <NavLink
+                      to="#"
                       data-toggle="tooltip"
                       data-placement="top"
                       title="Instagram"
                     >
-                      <span className="ion-logo-instagram"></span>
-                    </a>
+                      <PiInstagramLogoFill />
+                    </NavLink>
+                  </li>
+                  <li className="ftco-animate">
+                    <NavLink
+                      to="#"
+                      data-toggle="tooltip"
+                      data-placement="top"
+                      title="Instagram"
+                    >
+                      <FaLinkedinIn />
+                    </NavLink>
+                  </li>
+                  <li className="ftco-animate">
+                    <NavLink
+                      to="#"
+                      data-toggle="tooltip"
+                      data-placement="top"
+                      title="Instagram"
+                    >
+                      <FaYoutube />
+                    </NavLink>
                   </li>
                 </ul>
               </div>
-              <div className="col-md-8 justify-end">
+              <div className="col-lg-5 col-md-7 justify-end">
                 <div className="row justify-end">
                   <div className="col-md-12 justify-end">
                     <div className="row justify-end">
-                      <div className="col-md-4 justify-end">
+                      <div className="col-5 justify-end">
                         <h2 className={classes.footHeading}>Site</h2>
                         <ul className="list-unstyled">
                           <li>
@@ -111,7 +134,7 @@ const FooterComponent = () => {
                           </li>
                         </ul>
                       </div>
-                      <div className="col-md-4 justify-end">
+                      <div className="col-7 justify-end">
                         <h2 className={classes.footHeading}>Contacts US</h2>
                         <ul className="list-unstyled">
                           <li>
@@ -150,20 +173,23 @@ const FooterComponent = () => {
             </div>
           </div>
         </div>
-        <div className={`row align-center ${classes.marginToprights}`}>
-          <div className={`${classes.copyRight} col-6`}>
-            {translate("copyright")} © {date} {projectName}{" "}
-            {translate("rights")}.
-          </div>
-          <div className={`${classes.copyRight} col-6 text-right`}>
-            <span className="">{translate("organisation")} |</span>
-            <NavLink to={Routes.about} className={classes.rightReserv}>
-              {translate("terms")}
-            </NavLink>
-            <span className="">|</span>
-            <NavLink to={Routes.about} className={classes.rightReserv}>
-              {translate("privacy")}
-            </NavLink>
+        <div className="container">
+          <div className={`row align-center ${classes.marginToprights}`}>
+            <div className={`${classes.copyRight}col-12 col-md-6`}>
+              {translate("copyright")} © {date} {translate("rights")}.
+            </div>
+            <div
+              className={`${classes.copyRight} col-12 col-md-6 text-md-right text-left`}
+            >
+              <span className="">{translate("organisation")} |</span>
+              <NavLink to={Routes.about} className={classes.rightReserv}>
+                {translate("terms")}
+              </NavLink>
+              <span className="">|</span>
+              <NavLink to={Routes.about} className={`${classes.rightReserv}`}>
+                {translate("privacy")}
+              </NavLink>
+            </div>
           </div>
         </div>
       </div>
