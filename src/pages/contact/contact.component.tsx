@@ -54,28 +54,23 @@ const ContactComponent = () => {
         </div>
 
         <div className={`col-lg-6 col-sm-12 ${classes.submitForm}`}>
-          <Form
-            name='login'
-            initialValues={initialValues}
-            layout='vertical'
-          >
-           <div className={`row ${classes.form}`}>
-           <Form.Item name='email' className='col-lg-5 col-sm-12'>
-              <Input placeholder='Enter your username or email address' />
-            </Form.Item>
+          <Form name='login' initialValues={initialValues} layout='vertical'>
+            <div className={`row ${classes.form}`}>
+              <Form.Item name='email' className='col-lg-5 col-sm-12'>
+                <Input placeholder='Enter your username or email address' />
+              </Form.Item>
 
-            <Form.Item name='phone' className='col-lg-5 col-sm-12'>
-              <Input placeholder='Contact Number'></Input>
-            </Form.Item>
-            <Form.Item name='mövzu' className='col-lg-5 col-sm-12'>
-              <Input placeholder='Mövzu seçin'></Input>
-            </Form.Item>
+              <Form.Item name='phone' className='col-lg-5 col-sm-12'>
+                <Input placeholder='Contact Number'></Input>
+              </Form.Item>
+              <Form.Item name='mövzu' className='col-lg-5 col-sm-12'>
+                <Input placeholder='Mövzu seçin'></Input>
+              </Form.Item>
 
-            <Form.Item name='message' className='col-lg-5 col-sm-12'>
-              <Input placeholder='Mesajınızı daxil edin.'></Input>
-            </Form.Item>
-
-           </div>
+              <Form.Item name='message' className='col-lg-5 col-sm-12'>
+                <Input placeholder='Mesajınızı daxil edin.'></Input>
+              </Form.Item>
+            </div>
             <div>
               <Button className=' w-100' htmlType='submit'>
                 Submit <ArrowRight />
