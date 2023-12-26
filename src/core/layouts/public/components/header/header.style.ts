@@ -7,6 +7,9 @@ const styles = {
     // zIndex: 100,
     width: "100%",
   },
+  historyBar: {
+
+  },
 };
 
 export const useHeaderStyles = createUseStyles(styles);
