@@ -47,7 +47,7 @@ const styles = {
     },
   },
   form:{
-    '&:first-child': { marginLeft: rem(200) },
+    '&:first-child': { },
   }
 };
 export const useContactStyle = createUseStyles(styles);
