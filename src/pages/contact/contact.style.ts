@@ -45,9 +45,6 @@ const styles = {
       justifyContent: 'center',
       gap: '12px',
     },
-  },
-  form:{
-    '&:first-child': { marginLeft: rem(200) },
-  }
+  
 };
 export const useContactStyle = createUseStyles(styles);
