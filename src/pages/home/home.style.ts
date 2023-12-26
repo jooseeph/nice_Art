@@ -78,6 +78,58 @@ const styles = {
     fontWeight: "400",
     marginTop: rem(32),
   },
+  mainTxt: {
+    color: "#414D44",
+    fontSize: 16,
+    fontWeight: "400",
+    marginTop: 8,
+  },
+  aboutUsTxt: {
+    color: "#3E6F00",
+    fontSize: 16,
+    fontWeight: "800",
+  },
+  aboutUsSecondaryTxt: {
+    color: "#414D44",
+    fontSize: 44,
+    fontWeight: "800",
+    marginTop: 8,
+    wordWrap: "break-word",
+  },
+  learnMore: {
+    color: "#414D44",
+    fontSize: 20,
+    fontWeight: "500",
+    marginTop: 50,
+  },
+  learnMoreWrapper: {
+    display: "flex",
+    flexDirection: "column",
+    justifyContent: "flex-start",
+    alignItems: "flex-start",
+  },
+  productsTxt: {
+    color: "#3E6F00",
+    fontSize: 16,
+    fontFamily: "West Trial",
+    fontWeight: "800",
+  },
+  productsTitle: {
+    color: "#414D44",
+    fontSize: 44,
+    fontFamily: "West Trial",
+    fontWeight: "800",
+    wordWrap: "break-word",
+    whiteSpace: "pre",
+  },
+  productsContent: {
+    color: "#414D44",
+    fontSize: 16,
+    fontFamily: "West Trial",
+    fontWeight: "400",
+    // marginTop: 8,
+    alignItems: "center",
+  },
 };
 
 export const useHomeStyles = createUseStyles(styles);
