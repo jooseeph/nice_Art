@@ -55,7 +55,7 @@ const ContactComponent = () => {
 
         <div className={`col-lg-6 col-sm-12 ${classes.submitForm}`}>
           <Form name='login' initialValues={initialValues} layout='vertical'>
-            <div className={`row ${classes.form}`}>
+            <div className={`row `}>
               <Form.Item name='email' className='col-lg-5 col-sm-12'>
                 <Input placeholder='Enter your username or email address' />
               </Form.Item>

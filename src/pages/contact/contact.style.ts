@@ -45,6 +45,7 @@ const styles = {
       justifyContent: 'center',
       gap: '12px',
     },
+  }
   
 };
 export const useContactStyle = createUseStyles(styles);
