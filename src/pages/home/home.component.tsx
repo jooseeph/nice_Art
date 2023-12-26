@@ -2,6 +2,9 @@ import { ArrowDown, ArrowRight } from "assets/images/icons/arrows";
 import { useHomeStyles } from "./home.style";
 import homepage1 from "../../assets/images/statics/homepage1.png";
 import homepage2 from "../../assets/images/statics/homepage2.png";
+import { useRef } from "react";
+import { useNavigate } from "react-router";
+import { Routes } from "router/routes";
 
 const HomeComponent = () => {
   const {
@@ -14,7 +17,23 @@ const HomeComponent = () => {
     mainImgWrapper,
     mainImg,
     mainImgText,
+    aboutUsTxt,
+    aboutUsSecondaryTxt,
+    mainTxt,
+    learnMore,
+    learnMoreWrapper,
+    productsTxt,
+    productsTitle,
+    productsContent,
   } = useHomeStyles();
+
+  const ref = useRef<null | HTMLDivElement>(null);
+
+  const handleClick = () => {
+    ref.current?.scrollIntoView({ behavior: "smooth" });
+  };
+
+  const navigate = useNavigate();
 
   return (
     <div>
@@ -27,10 +46,13 @@ const HomeComponent = () => {
           egestas. Nunc, dignissim amet, purus amet. Amet dictum sit elit urna
           non purus, gravida commodo.
           <div className={headerBtns}>
-            <button className={productBtn}>
+            <button
+              className={productBtn}
+              onClick={() => navigate(Routes.products)}
+            >
               <p className={btnText}>Products</p> <ArrowRight />
             </button>
-            <button className={aboutBtn}>
+            <button className={aboutBtn} onClick={() => handleClick()}>
               <p className={btnText}>About NICART</p>
 
               <ArrowDown />
@@ -53,53 +75,18 @@ const HomeComponent = () => {
         </div>
       </div>
       <div className="row" style={{ marginTop: 80 }}>
-        <div className="col-6">
-          <p style={{ color: "#3E6F00", fontSize: 16, fontWeight: "800" }}>
-            ABOUT US
-          </p>
-          <p
-            style={{
-              color: "#414D44",
-              fontSize: 44,
-              fontWeight: "800",
-              marginTop: 8,
-              wordWrap: "break-word",
-            }}
-          >
-            Lectus mauris pulvinar sit.
-          </p>
-          <p
-            style={{
-              color: "#414D44",
-              fontSize: 16,
-              fontWeight: "400",
-              marginTop: 8,
-            }}
-          >
+        <div className="col-6" ref={ref}>
+          <p className={aboutUsTxt}>ABOUT US</p>
+          <p className={aboutUsSecondaryTxt}>Lectus mauris pulvinar sit.</p>
+          <p className={mainTxt}>
             Malesuada tortor fringilla ut faucibus. Urna tellus lectus platea
             turpis non. Tellus odio eu ante tincidunt vivamus nunc nibh arcu,
             augue. Egestas et amet neque placerat aliquam tempor. Ultricies
             natoque lacus, id natoque cras. Erat aliquam sollicitudin risus
             semper molestie. Ut mattis nisl faucibus vel tincidunt.
           </p>
-          <div
-            style={{
-              display: "flex",
-              flexDirection: "column",
-              justifyContent: "flex-start",
-              alignItems: "flex-start",
-            }}
-          >
-            <p
-              style={{
-                color: "#414D44",
-                fontSize: 20,
-                fontWeight: "500",
-                marginTop: 50,
-              }}
-            >
-              Learn more
-            </p>
+          <div className={learnMoreWrapper}>
+            <p className={learnMore}>Learn more</p>
             <div style={{ height: 4, width: 92, background: "#3E6F00" }}></div>
           </div>
         </div>
@@ -107,6 +94,31 @@ const HomeComponent = () => {
           <div>
             <img src={homepage2} style={{ width: "100%" }} alt="" />
           </div>
+        </div>
+      </div>
+      <div className="row">
+        <div className="col-12" style={{ marginTop: 200 }}>
+          <p className={productsTxt}>Products</p>
+        </div>
+      </div>
+      <div className="row">
+        <div
+          className="col-6"
+          style={{ display: "flex", alignItems: "center" }}
+        >
+          <p className={productsTitle}>Daşınmaz əmlak krediti</p>
+        </div>
+        <div
+          className="col-6"
+          style={{ display: "flex", alignItems: "center" }}
+        >
+          <p className={productsContent}>
+            Quisque bibendum adipiscing sem massa auctor nulla donec mi integer.
+            Suspendisse eget convallis magna viverra amet. Ut quam scelerisque
+            massa morbi ac pharetra. Sit at elit non et diam. Quam a id egestas
+            elit. Posuere cursus accumsan urna viverra. Sit egestas et convallis
+            donec risus sapien enim. Gravida praesent adipiscin
+          </p>
         </div>
       </div>
     </div>
