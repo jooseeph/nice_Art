@@ -22,7 +22,7 @@ const FooterComponent = () => {
       <div className="container">
         <div className="row">
           <div className="col-md-12 py-5">
-            <div className="row">
+            <div className="row justify-between">
               <div className="col-lg-3 col-md-4">
                 <div className={classes.logoImg}>
                   <NavLink to={Routes.home}>
