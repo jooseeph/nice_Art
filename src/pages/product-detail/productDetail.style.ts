@@ -53,9 +53,9 @@ const style = {
       height: rem(260),
       paddingLeft: "0!important",
       padding: `${rem(37) + " " + rem(0) + " " + rem(50) + " " + rem(0)}`,
-    },
-    "& img": {
+      "& img": {
       width: "100%",
+    },
     },
   },
   credit_about: {
