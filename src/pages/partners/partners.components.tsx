@@ -1,7 +1,7 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
 import React, { useState } from 'react';
 import { PartnersCard } from './partners';
-import { partnersStyle, partnersStyleCard } from './partners.style';
+import { usePartnersStyle, usePartnersStyleCard } from './partners.style';
 import { generateGuid } from 'core/helpers/generate-guid';
 import { ArrowRight } from 'assets/images/icons/arrows';
 
@@ -12,11 +12,11 @@ const PartnersCardComponent = ({
   text,
   onClick,
 }: PartnersCard & { onClick: () => void }) => {
-  const classes = partnersStyleCard();
+  const classes = usePartnersStyleCard();
   return (
     <div className={`col-lg-3 col-sm-6 ${classes.card}`} onClick={onClick}>
-      <div className={classes.imageAndTitle}>
-        <img src={imageSrc} alt={title}  />
+      <div className={` ${classes.imageAndTitle}`}>
+        <img src={imageSrc} alt={title} />
         <h2 className={classes.title}>{title}</h2>
       </div>
       <p className={classes.description}>{description}</p>
@@ -63,7 +63,7 @@ export const PartnersComponent = () => {
     },
   ];
   const [selectedCard, setSelectedCard] = useState<PartnersCard | null>(null);
-  const classes = partnersStyle();
+  const classes = usePartnersStyle();
 
   const handleCardClick = (card: PartnersCard) => {
     setSelectedCard(card);
@@ -78,7 +78,7 @@ export const PartnersComponent = () => {
         <div className={`${classes.left} col-md-5`}>
           <h1>Title for Partners or Lorem Ipsum motto</h1>
         </div>
-        <div className={`${classes.right} col-md-7`}>
+        <div className={`${classes.right} col-md-7  `}>
           <h1 className={classes.rightTitle}>Lectus mauris pulvinar</h1>
           <p className={classes.rightText}>
             Commodo interdum at lorem eget amet placerat nunc posuere. Viverra
@@ -103,19 +103,35 @@ export const PartnersComponent = () => {
       {selectedCard && (
         <div className={classes.modalOverlay} onClick={handleCloseModal}>
           <div
-            className={`${classes.modalContent} row  align-center`}
+            className={`${classes.modalContent} row align-center`}
             onClick={e => e.stopPropagation()}
           >
-            <div className="row">
-            <div className='col-2'>
-              <img src={selectedCard.imageSrc} alt={selectedCard.title} />
-            </div>
-            <div className='col-10'>
-              <h2>{selectedCard.title}</h2>
-              <h2>{selectedCard.description}</h2>
-            </div>
+            <div className='row'>
+              <div className='col-2'>
+                <img
+                  style={{ width: 60 }}
+                  src={selectedCard.imageSrc}
+                  alt={selectedCard.title}
+                />
+              </div>
+              <div className='col-10'>
+                <h2>{selectedCard.title}</h2>
+                <h2>{selectedCard.description}</h2>
+              </div>
             </div>
             <p>{selectedCard.text}</p>
+            <div className='row justify-between'>
+              <div className='col-md-6 '>
+                <button className={`btn btn-block ${classes.mainBtn}`}>
+                  Visit Website
+                </button>
+              </div>
+              <div className='col-md-6'>
+                <button className={`btn btn-block ${classes.mainBtn}`}>
+                  Close
+                </button>
+              </div>
+            </div>
           </div>
         </div>
       )}
