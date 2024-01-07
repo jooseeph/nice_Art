@@ -3,8 +3,14 @@ import fonts from "assets/styles/abstracts/fonts";
 import { rem } from "assets/styles/abstracts/functions";
 import sizes from "assets/styles/abstracts/sizes";
 import { createUseStyles } from "react-jss";
+import { breakpoint } from "assets/styles/abstracts/mixins";
 
 const styles = {
+  headerWrapper: {
+    [breakpoint(1200)]: {
+      display: "block !important",
+    },
+  },
   header: {
     marginTopn: rem(20),
   },
@@ -13,6 +19,10 @@ const styles = {
     fontSize: 72,
     fontWeight: "800",
     fontFamily: "WestTrial Thin",
+    [breakpoint(1200)]: {
+      maxWidth: "100%",
+      fontSize: 36,
+    },
   },
   headerText: {
     color: colors.navText,
@@ -88,6 +98,10 @@ const styles = {
     color: "#3E6F00",
     fontSize: 16,
     fontWeight: "800",
+  },
+  aboutUsWrapper: {
+    padding: rem(0) + " " + rem(100),
+    marginTop: rem(80),
   },
   aboutUsSecondaryTxt: {
     color: "#414D44",

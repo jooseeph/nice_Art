@@ -25,6 +25,8 @@ const HomeComponent = () => {
     productsTxt,
     productsTitle,
     productsContent,
+    aboutUsWrapper,
+    headerWrapper,
   } = useHomeStyles();
 
   const ref = useRef<null | HTMLDivElement>(null);
@@ -37,7 +39,7 @@ const HomeComponent = () => {
 
   return (
     <div>
-      <div className="row">
+      <div className={`${headerWrapper} row`}>
         <div className={`${headerTitle} col-6`}>
           We help you find the perfect loan
         </div>
@@ -74,8 +76,8 @@ const HomeComponent = () => {
           </p>
         </div>
       </div>
-      <div className="row" style={{ marginTop: 80 }}>
-        <div className="col-6" ref={ref}>
+      <div className={`${aboutUsWrapper} row`}>
+        <div className="col-6" ref={ref} style={{ padding: 0 }}>
           <p className={aboutUsTxt}>ABOUT US</p>
           <p className={aboutUsSecondaryTxt}>Lectus mauris pulvinar sit.</p>
           <p className={mainTxt}>
