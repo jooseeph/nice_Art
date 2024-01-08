@@ -51,4 +51,8 @@ export const az = {
   phone: "Əlaqə nömrəsi",
   agreement: "AKB RAZILIQ vəriləsi üçün icazə",
   submit: "Müraciət et",
+  //about
+  who_are_us: 'Biz kimik?',
+  our_purpose: 'Məqsədimiz',
+  our_strategy: 'Strategiyamız',
 };
