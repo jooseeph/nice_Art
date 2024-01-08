@@ -57,7 +57,7 @@ const ContactComponent = () => {
         <div className={classes.overlay}></div>
         <div
           className='row '
-          style={{ paddingTop: '120px', paddingBottom: '120px' }}
+          style={{ paddingTop: '120px', paddingBottom: '80px' }}
         >
           <div className={` col-lg-6 col-sm-12  ${classes.leftTitle}`}>
             <h1>Have a project! Let’s diascuss </h1>

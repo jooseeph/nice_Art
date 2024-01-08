@@ -1,13 +1,19 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
-import  { useState } from 'react';
+import { useState } from 'react';
 import { PartnersCard } from './partners';
 import { usePartnersStyle } from './partners.style';
 import { generateGuid } from 'core/helpers/generate-guid';
 import { ArrowRight } from 'assets/images/icons/arrows';
 import colors from 'assets/styles/abstracts/color';
-import PartnersCardComponent  from './components/partnersCard.component'
+import PartnersCardComponent from './components/partnersCard.component';
+import { usePartners } from './actions/partners.query';
 
 export const PartnersComponent = () => {
+
+  const {data} = usePartners();
+  console.log("PartnersComponent ~ data", data)
+
+  
   const cardsData = [
     {
       imageSrc: '/src/assets/images/statics/amazon.svg',
