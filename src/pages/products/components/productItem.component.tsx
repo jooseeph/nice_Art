@@ -4,6 +4,7 @@ import useLocalization from "assets/lang";
 import { NavLink } from "react-router-dom";
 import { Routes } from "router/routes";
 import { useProducts } from "../actions/products.query";
+import { generateGuid } from "core/helpers/generate-guid";
 
 const ProductItemComponent = () => {
   const classes = useProductItemStyles();
@@ -14,8 +15,8 @@ const ProductItemComponent = () => {
   return (
     <>
       {data &&
-        data.map((product, index) => (
-          <div key={index} className={`${classes.productItem} mb-40`}>
+        data.map((product) => (
+          <div key={generateGuid()} className={`${classes.productItem} mb-40`}>
             <div className="row">
               <div className="col-md-7">
                 <h3 className={classes.productItemTitle}>

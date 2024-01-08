@@ -1,3 +1,4 @@
+import { generateGuid } from "core/helpers/generate-guid";
 import { ICreditStaticItem } from "./creditStaticItem";
 import { useCreditStaticItemStyles } from "./creditStaticItem.style";
 import credit_icon_1 from "assets/images/statics/credit_icon_1.svg";
@@ -21,9 +22,9 @@ const CreditStaticItemComponent = ({
 
   return (
     <div className="row">
-      {staticItems.map((creditInf, index) => {
+      {staticItems.map((creditInf) => {
         return (
-          <div key={index} className="col-md-4">
+          <div key={generateGuid()} className="col-md-4">
             <div className={classes.credit_detail_box}>
               <div className={classes.icon}>
                 <img src={credit_icon_1} alt="" />

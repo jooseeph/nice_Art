@@ -6,20 +6,16 @@ import { createUseStyles } from "react-jss";
 const styles = {
   products: { marginTop: rem(60) },
   productDesc: {
-    paddingLeft: rem(100),
-    "@media (max-width:768px)": {
-      paddingLeft: 0,
-    },
   },
   title: {
-    fontFamily: fonts.fontBold,
+    fontFamily: fonts.fontMedium,
     fontSize: rem(60),
     fontWeight: "800",
     lineHeight: rem(79),
     letterSpacing: rem(0),
     textAlign: "left",
     color: colors.titleGreen,
-    padding: 0,
+    paddingRight: rem(30),
     margin: 0,
     "@media (max-width:768px)": {
       fontSize: rem(36),
@@ -48,7 +44,7 @@ const styles = {
     },
   },
   description: {
-    fontFamily: fonts.fontBold,
+    fontFamily: fonts.font,
     fontSize: rem(16),
     fontWeight: "400",
     lineHeight: rem(22),
