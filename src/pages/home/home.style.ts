@@ -4,14 +4,8 @@ import { rem } from "assets/styles/abstracts/functions";
 import { breakpoint } from "assets/styles/abstracts/mixins";
 import sizes from "assets/styles/abstracts/sizes";
 import { createUseStyles } from "react-jss";
-import { breakpoint } from "assets/styles/abstracts/mixins";
 
 const styles = {
-  headerWrapper: {
-    [breakpoint(1200)]: {
-      display: "block !important",
-    },
-  },
   header: {
     [breakpoint(1200)]: {
       display: 'block',
@@ -124,10 +118,6 @@ const styles = {
       fontSize: 16,
       minWidth: '100%',
     },
-  },
-  aboutUsWrapper: {
-    padding: rem(0) + " " + rem(100),
-    marginTop: rem(80),
   },
   aboutUsSecondaryTxt: {
     color: colors.mainImgTextColor,
