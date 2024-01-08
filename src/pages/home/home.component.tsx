@@ -8,6 +8,7 @@ import { Routes } from "router/routes";
 import { Col, Slider } from "antd";
 import { Checkbox } from "antd";
 import useLocalization from "assets/lang";
+import { useLeads } from "./actions/home.query";
 const HomeComponent = () => {
   const {
     slider,
@@ -85,6 +86,10 @@ const HomeComponent = () => {
 
   const navigate = useNavigate();
   const translate = useLocalization();
+
+  const {data} = useLeads()
+  console.log(data);
+  
 
   return (
     <div style={{ paddingBottom: 100 }}>
