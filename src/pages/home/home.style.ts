@@ -148,14 +148,14 @@ const styles = {
     fontSize: 16,
     fontFamily: fonts.font,
     fontWeight: '800',
-    paddingLeft: rem(0),
+    paddingRight: rem(2),
   },
   applyLoanText: {
     color: colors.abutbtnColor,
     fontSize: 16,
     fontFamily: fonts.font,
     fontWeight: '800',
-    paddingLeft: rem(17),
+    paddingLeft: rem(0),
   },
   productsTitle: {
     color: colors.mainImgTextColor,
@@ -187,8 +187,10 @@ const styles = {
     },
   },
   loanWrapper: {
+    paddingRight: rem(10),
     [breakpoint(1200)]: {
       minWidth: '100%',
+      
     },
   },
   slider: {
