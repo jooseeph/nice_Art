@@ -20,6 +20,12 @@ const colors = {
   contactBackground: '#3E6F000A',
   contactTitleActive: '#3E6F00',
   contactTitleText: '#414D44',
+
+  //home
+  abutbtnColor: "#3e6f00",
+  mainImgTextColor: "#414D44",
+  aboutusTxt: "#3E6F00",
+  finInputColor: "#404D43",
 };
 
 export default colors;
