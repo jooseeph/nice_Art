@@ -6,21 +6,19 @@ import "./App.scss";
 import { QueryClient, QueryClientProvider } from "react-query";
 import { ConfigProvider } from "antd";
 import { themeConfig } from "core/configs/theme.config";
-import useGlobalStyles from "assets/styles/style";
-
 
 const queryClient = new QueryClient();
 function App() {
   const loader = useStore("loader");
-  useGlobalStyles();
+
   return (
     <>
-      <QueryClientProvider client = {queryClient}>
+      <QueryClientProvider client={queryClient}>
         <ConfigProvider theme={themeConfig}>
-        <div className="App">
-          <RouterProvider router={router} />
-          {loader ? <LoaderComponent /> : null}
-        </div>
+          <div className='App'>
+            <RouterProvider router={router} />
+            {loader ? <LoaderComponent /> : null}
+          </div>
         </ConfigProvider>
       </QueryClientProvider>
     </>
