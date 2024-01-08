@@ -47,4 +47,8 @@ export const az = {
   month: "Ay",
   rate: "Faiz dərəcəsi",
   payment: "Aylıq ödəniş",
+  fin: "FIN code",
+  phone: "Əlaqə nömrəsi",
+  agreement: "AKB RAZILIQ vəriləsi üçün icazə",
+  submit: "Müraciət et",
 };

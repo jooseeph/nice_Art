@@ -44,21 +44,37 @@ const HomeComponent = () => {
     line,
     loanInputTxt,
     loanInputheader,
+    applyLoanText,
   } = useHomeStyles();
 
   const [price, setPrice] = useState(2500);
   const [month, setmonth] = useState(1);
   const [percentage, setpercentage] = useState(10);
-  // const [payment, setpayment] = useState(0);
+  const [monthlyPayment, setmonthlyPayment] = useState<number | string>(0);
+
+  const calculatePayment = () => {
+    const monthlyInterestRate = percentage / 100 / 12;
+    const totalPayments = month;
+    const monthlyPayment =
+      (price *
+        (monthlyInterestRate *
+          Math.pow(1 + monthlyInterestRate, totalPayments))) /
+      (Math.pow(1 + monthlyInterestRate, totalPayments) - 1);
+
+    setmonthlyPayment(monthlyPayment.toFixed(2));
+  };
 
   const onPriceChange = (newValue: number) => {
     setPrice(newValue);
+    calculatePayment();
   };
   const onMonthChange = (newValue: number) => {
     setmonth(newValue);
+    calculatePayment();
   };
   const onPercentageChange = (newValue: number) => {
     setpercentage(newValue);
+    calculatePayment();
   };
 
   const ref = useRef<null | HTMLDivElement>(null);
@@ -142,7 +158,7 @@ const HomeComponent = () => {
       </div>
       <div className="row" style={{ marginTop: 174, alignItems: "center" }}>
         <div className={`${loanWrapper} col-6`}>
-          <p className={productsTxt}>{translate("applyLoan")}</p>
+          <p className={applyLoanText}>{translate("applyLoan")}</p>
           <p
             className={productsTitle}
             style={{ whiteSpace: "pre-wrap", paddingRight: 10 }}
@@ -226,10 +242,7 @@ const HomeComponent = () => {
           </div>
           <div style={{ marginTop: 54 }}>
             <p className={payment}>{translate("payment")}</p>
-            <p className={paymentTxt}>
-              {/* {payment} */}
-              200azn
-            </p>
+            <p className={paymentTxt}>{monthlyPayment}M</p>
             <div
               style={{
                 display: "flex",
@@ -238,11 +251,11 @@ const HomeComponent = () => {
               }}
             >
               <div style={{}}>
-                <p className={finInputTxt}>FIN code</p>
+                <p className={finInputTxt}>{translate("fin")}</p>
                 <input type="text" className={finInput} />
               </div>
               <div>
-                <p className={finInputTxt}>Əlaqə nömrəsi</p>
+                <p className={finInputTxt}>{translate("phone")}</p>
                 <input
                   type="text"
                   placeholder="+994 00 000 00 00"
@@ -253,15 +266,13 @@ const HomeComponent = () => {
             <div className={loanBtn}>
               <div style={{ display: "flex", alignItems: "center" }}>
                 <Checkbox />
-                <p style={{ marginLeft: 11 }}>
-                  AKB RAZILIQ vəriləsi üçün icazə{" "}
-                </p>
+                <p style={{ marginLeft: 11 }}>{translate("agreement")}</p>
               </div>
               <button
                 className={loanMainBtn}
                 onClick={() => navigate(Routes.products)}
               >
-                <p className={btnText}>Müraciət et</p> <ArrowRight />
+                <p className={btnText}>{translate("submit")}</p> <ArrowRight />
               </button>
             </div>
           </div>

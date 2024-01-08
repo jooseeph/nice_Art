@@ -12,9 +12,14 @@ const colors = {
   titleGreen: "#3E6F00",
   titleBlack: "#414D44",
   iconBackground: "#3E6F0005",
-  iconDescrip: '#707872',
-//sosial icon
-sosialIcon:'#6E9E37',
+  iconDescrip: "#707872",
+  //sosial icon
+  sosialIcon: "#6E9E37",
+  //home
+  abutbtnColor: "#3e6f00",
+  mainImgTextColor: "#414D44",
+  aboutusTxt: "#3E6F00",
+  finInputColor: "#404D43",
 };
 
 export default colors;
