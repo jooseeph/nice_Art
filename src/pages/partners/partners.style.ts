@@ -14,7 +14,7 @@ const styles = {
       fontSize: rem(36),
     },
   },
-  right: { },
+  right: {},
   rightTitle: {
     color: '#414D44',
     fontSize: '44px',
@@ -36,7 +36,7 @@ const styles = {
   mainBtn: {
     borderRadius: '8px',
     backgroundColor: '#3E6F00',
-    border:'none',
+    border: 'none',
     padding: '12px 24px',
     display: 'flex',
     flexDirection: 'row',
@@ -45,6 +45,7 @@ const styles = {
     gap: '12px',
     color: '#fff',
     marginTop: rem(24),
+    
   },
   modalOverlay: {
     position: 'fixed',
@@ -63,7 +64,16 @@ const styles = {
 
     padding: rem(24),
     borderRadius: rem(8),
-    textAlign: 'center',
+    '& h3': {
+      marginTop: rem(10),
+      color: '#3E6F00',
+      fontSize: rem(8),
+      textTransform: 'uppercase',
+      padding: '2px 4px',
+      borderRadius: rem(4),
+      background: '#3e6f0014',
+      display: 'inline-block',
+    },
   },
 };
 

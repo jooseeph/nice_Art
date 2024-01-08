@@ -31,67 +31,68 @@ const ContactComponent = () => {
           <p>+994 51 535 11 35</p>
         </div>
         <div className='right col-lg-7 col-sm-12'>
-          <img src='/src/assets/images/statics/photo4.png' alt='' />
+          <img style={{maxWidth:'100%'}} src='/src/assets/images/statics/photo4.png' alt='' />
         </div>
       </div>
-      <div
-        className='row'
-        style={{
-          backgroundColor: '#3e6f000a',
-          paddingTop: 120,
-          paddingBottom: 200,
-        }}
+      <section className='formSection'>
+        <div className={classes.overlay}></div>
+        <div
+          className='row'
+          style={{ paddingTop: '120px', paddingBottom: '120px' }}
+        >
+          <div className={` col-lg-6 col-sm-12 ${classes.leftTitle}`}>
+            <h1>Have a project! Let’s diascuss </h1>
+            <p>
+              Vehicula elit est, neque non mattis pharetra, urna lectus magnis.
+              Ultricies tellus adipiscing a sem ultrices eu pulvinar. Urna
+              egestas est aliquet facilisis elit sit. Massa libero turpis
+              facilisi mattis sit ac consectetur malesuada et. Urna, orci arcu
+              senectus mattis nam euismod cum cursus. Enim nunc quis commodo leo
+              libero diam.
+            </p>
+          </div>
+
+          <div className={`col-lg-6 col-sm-12 ${classes.submitForm}`}>
+            <Form name='login' initialValues={initialValues} layout='vertical'>
+              <div className={`row `}>
+                <Form.Item name='email' className=''>
+                  <Input placeholder='Enter your username or email address' />
+                </Form.Item>
+
+                <Form.Item name='phone' className='w-100'>
+                  <Input  placeholder='Contact Number'></Input>
+                </Form.Item>
+                <Form.Item name='mövzu' className=''>
+                  <Input placeholder='Mövzu seçin'></Input>
+                </Form.Item>
+
+                <Form.Item name='message' className=''>
+                  <Input placeholder='Mesajınızı daxil edin.'></Input>
+                </Form.Item>
+              </div>
+              <div>
+                <Button className=' w-100' htmlType='submit'>
+                  Submit <ArrowRight />
+                </Button>
+              </div>
+            </Form>
+          </div>
+        </div>
+      </section>
+
+      <section
+        className='mapSection relative'
+        style={{ height: '440px', width: '100%' }}
       >
-        <div className={` col-lg-6 col-sm-12 ${classes.leftTitle}`}>
-          <h1>Have a project! Let’s diascuss </h1>
-          <p>
-            Vehicula elit est, neque non mattis pharetra, urna lectus magnis.
-            Ultricies tellus adipiscing a sem ultrices eu pulvinar. Urna egestas
-            est aliquet facilisis elit sit. Massa libero turpis facilisi mattis
-            sit ac consectetur malesuada et. Urna, orci arcu senectus mattis nam
-            euismod cum cursus. Enim nunc quis commodo leo libero diam.
-          </p>
+        <div className={classes.maps}>
+          <iframe
+            src='https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d194472.7699404105!2d49.6898078218915!3d40.3947365196588!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40307d6bd6211cf9%3A0x343f6b5e7ae56c6b!2sBaku!5e0!3m2!1sen!2saz!4v1703572048350!5m2!1sen!2saz'
+            height='440'
+            className='w-100'
+            loading='lazy'
+          ></iframe>
         </div>
-
-        <div className={`col-lg-6 col-sm-12 ${classes.submitForm}`}>
-          <Form
-            name='login'
-            initialValues={initialValues}
-            layout='vertical'
-          >
-           <div className={`row ${classes.form}`}>
-           <Form.Item name='email' className='col-lg-5 col-sm-12'>
-              <Input placeholder='Enter your username or email address' />
-            </Form.Item>
-
-            <Form.Item name='phone' className='col-lg-5 col-sm-12'>
-              <Input placeholder='Contact Number'></Input>
-            </Form.Item>
-            <Form.Item name='mövzu' className='col-lg-5 col-sm-12'>
-              <Input placeholder='Mövzu seçin'></Input>
-            </Form.Item>
-
-            <Form.Item name='message' className='col-lg-5 col-sm-12'>
-              <Input placeholder='Mesajınızı daxil edin.'></Input>
-            </Form.Item>
-
-           </div>
-            <div>
-              <Button className=' w-100' htmlType='submit'>
-                Submit <ArrowRight />
-              </Button>
-            </div>
-          </Form>
-        </div>
-      </div>
-      <div className='maps'>
-        <iframe
-          src='https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d194472.7699404105!2d49.6898078218915!3d40.3947365196588!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40307d6bd6211cf9%3A0x343f6b5e7ae56c6b!2sBaku!5e0!3m2!1sen!2saz!4v1703572048350!5m2!1sen!2saz'
-          height='440'
-          className='w-100'
-          loading='lazy'
-        ></iframe>
-      </div>
+      </section>
     </div>
   );
 };

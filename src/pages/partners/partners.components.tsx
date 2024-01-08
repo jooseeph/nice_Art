@@ -4,6 +4,7 @@ import { PartnersCard } from './partners';
 import { usePartnersStyle, usePartnersStyleCard } from './partners.style';
 import { generateGuid } from 'core/helpers/generate-guid';
 import { ArrowRight } from 'assets/images/icons/arrows';
+import colors from 'assets/styles/abstracts/color';
 
 const PartnersCardComponent = ({
   imageSrc,
@@ -106,30 +107,35 @@ export const PartnersComponent = () => {
             className={`${classes.modalContent} row align-center`}
             onClick={e => e.stopPropagation()}
           >
-            <div className='row'>
-              <div className='col-2'>
-                <img
-                  style={{ width: 60 }}
-                  src={selectedCard.imageSrc}
-                  alt={selectedCard.title}
-                />
-              </div>
-              <div className='col-10'>
-                <h2>{selectedCard.title}</h2>
-                <h2>{selectedCard.description}</h2>
+            <div className='col-12'>
+              <div className='row'>
+                <div className='col-2 p-0 '>
+                  <img
+                    style={{ width: 60, marginRight: 20 }}
+                    src={selectedCard.imageSrc}
+                    alt={selectedCard.title}
+                  />
+                </div>
+                <div className='col-10 p-0 mt-10'>
+                  <h2>{selectedCard.title}</h2>
+                  <h3>{selectedCard.description}</h3>
+                </div>
               </div>
             </div>
             <p>{selectedCard.text}</p>
-            <div className='row justify-between'>
-              <div className='col-md-6 '>
-                <button className={`btn btn-block ${classes.mainBtn}`}>
-                  Visit Website
-                </button>
-              </div>
-              <div className='col-md-6'>
-                <button className={`btn btn-block ${classes.mainBtn}`}>
-                  Close
-                </button>
+            <div className='col-12 p-0'>
+              <div className='row justify-start'>
+                <div className='col-6'>
+                  <button className={`btn btn-block w-100 ${classes.mainBtn}`}>
+                    Visit Website
+                  </button>
+                </div>
+
+                <div className='col-6'>
+                  <button className={`btn btn-block w-100 ${classes.mainBtn}`}>
+                    Close
+                  </button>
+                </div>
               </div>
             </div>
           </div>

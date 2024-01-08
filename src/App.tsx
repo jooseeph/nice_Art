@@ -4,6 +4,9 @@ import { useStore } from "./store/store.config";
 import LoaderComponent from "core/shared/loader/loader.component";
 import "./App.scss";
 import { QueryClient, QueryClientProvider } from "react-query";
+import { ConfigProvider } from "antd";
+import { themeConfig } from "core/configs/theme.config";
+
 const queryClient = new QueryClient();
 function App() {
   const loader = useStore("loader");
@@ -11,10 +14,12 @@ function App() {
   return (
     <>
       <QueryClientProvider client = {queryClient}>
+        <ConfigProvider theme={themeConfig}>
         <div className="App">
           <RouterProvider router={router} />
           {loader ? <LoaderComponent /> : null}
         </div>
+        </ConfigProvider>
       </QueryClientProvider>
     </>
   );

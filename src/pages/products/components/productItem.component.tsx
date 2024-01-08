@@ -4,12 +4,13 @@ import useLocalization from "assets/lang";
 import { NavLink } from "react-router-dom";
 import { Routes } from "router/routes";
 import { useProducts } from "../actions/products.query";
-import product_img from "assets/images/statics/product.svg"
 
 const ProductItemComponent = () => {
   const classes = useProductItemStyles();
   const translate = useLocalization();
   const { data } = useProducts();
+  console.log(data);
+
   return (
     <>
       {data &&
@@ -17,44 +18,25 @@ const ProductItemComponent = () => {
           <div key={index} className={`${classes.productItem} mb-40`}>
             <div className="row">
               <div className="col-md-7">
-                <h3 className={classes.productItemTitle}>{product.title}</h3>
+                <h3 className={classes.productItemTitle}>
+                  {product.about.title}
+                </h3>
                 <p className={classes.productDescription}>
-                  {product.description}
+                  {product.about.description}
                 </p>
                 <div className={classes.creditDetail}>
                   <div className="row">
                     <div className="col-md-4 col-6">
-                      <label htmlFor="">
-                        {product?.credit_information[3].credit_infor_title}
-                      </label>
-                      <span>
-                        {
-                          product?.credit_information[3]
-                            .credit_infor_description
-                        }
-                      </span>
+                      <label htmlFor="">Müddət (Ay)</label>
+                      <span>{product?.features.period}</span>
                     </div>
                     <div className="col-md-4 col-6">
-                      <label htmlFor="">
-                        {product?.credit_information[0].credit_infor_title}
-                      </label>
-                      <span>
-                        {
-                          product?.credit_information[0]
-                            .credit_infor_description
-                        }
-                      </span>
+                      <label htmlFor="">Məbləğ (AZN)</label>
+                      <span>{product?.features.amount}</span>
                     </div>
                     <div className={`${classes.mobileNone} col-md-4`}>
-                      <label htmlFor="">
-                        {product?.credit_information[1].credit_infor_title}
-                      </label>
-                      <span>
-                        {
-                          product?.credit_information[1]
-                            .credit_infor_description
-                        }
-                      </span>
+                      <label htmlFor="">Faiz dərəcəsi (%)</label>
+                      <span>{product?.features.initialPayment}</span>
                     </div>
                   </div>
                 </div>
@@ -68,13 +50,13 @@ const ProductItemComponent = () => {
                     </button>
                   </NavLink>
                   <div className={`${classes.productImgMobile} d-none`}>
-                    <img src={product_img} alt="product" />
+                    <img src={product.file.url} alt="product" />
                   </div>
                 </div>
               </div>
               <div className="col-md-5 d-flex align-center justify-end">
                 <div className={`${classes.productImg}`}>
-                  <img src={product_img} alt="product" />
+                  <img src={product.file.url} alt="product" />
                 </div>
               </div>
             </div>
@@ -85,5 +67,3 @@ const ProductItemComponent = () => {
 };
 
 export default ProductItemComponent;
-
-
