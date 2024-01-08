@@ -12,7 +12,7 @@ const ContactComponent = () => {
   return (
     <div className='container'>
       <div className='row'>
-        <div className={`left col-lg-4  col-sm-12 ${classes.left}`}>
+        <div className={`left col-lg-5  col-sm-12 ${classes.left}`}>
           <h1 style={{ fontWeight: '60px' }}>DISCOVER US</h1>
           <p>
             Flick is here to help you; Our experts are available to answer any
@@ -30,17 +30,36 @@ const ContactComponent = () => {
           <h1>Call US</h1>
           <p>+994 51 535 11 35</p>
         </div>
-        <div className='right col-lg-7 col-sm-12'>
-          <img style={{maxWidth:'100%'}} src='/src/assets/images/statics/photo4.png' alt='' />
+        <div className={` col-lg-7 col-sm-12 ${classes.img}`}>
+          <div className='column top'>
+            <img
+              src='/src/assets/images/statics/contactPhoto1.svg'
+              alt='Image 1'
+            />
+            <img className='specialImage'
+              src='/src/assets/images/statics/contactPhoto2.svg'
+              alt='Image 2'
+            />
+          </div>
+          <div className='column bottom '>
+            <img
+              src='/src/assets/images/statics/contactPhoto3.svg'
+              alt='Image 3'
+            />
+            <img
+              src='/src/assets/images/statics/contactPhoto4.svg'
+              alt='Image 4'
+            />
+          </div>
         </div>
       </div>
-      <section className='formSection'>
+      <section className='formSection col-sm-12'>
         <div className={classes.overlay}></div>
         <div
-          className='row'
+          className='row '
           style={{ paddingTop: '120px', paddingBottom: '120px' }}
         >
-          <div className={` col-lg-6 col-sm-12 ${classes.leftTitle}`}>
+          <div className={` col-lg-6 col-sm-12  ${classes.leftTitle}`}>
             <h1>Have a project! Let’s diascuss </h1>
             <p>
               Vehicula elit est, neque non mattis pharetra, urna lectus magnis.
@@ -52,25 +71,34 @@ const ContactComponent = () => {
             </p>
           </div>
 
-          <div className={`col-lg-6 col-sm-12 ${classes.submitForm}`}>
+          <div className={`col-lg-6 col-sm-12  pl-75 ${classes.submitForm}`}>
             <Form name='login' initialValues={initialValues} layout='vertical'>
-              <div className={`row `}>
-                <Form.Item name='email' className=''>
+              <div className={`row justify-between`}>
+                <Form.Item className={classes.submitInput} name='email'>
+                  Ad Soyad
+                  <Input placeholder='Enter your username or email address' />
+                </Form.Item>
+                <Form.Item className={classes.submitInput} name='email'>
+                  E-poçt
                   <Input placeholder='Enter your username or email address' />
                 </Form.Item>
 
-                <Form.Item name='phone' className='w-100'>
-                  <Input  placeholder='Contact Number'></Input>
+                <Form.Item className={classes.submitInput} name='phone'>
+                  Əlaqə nömrəsi
+                  <Input placeholder='Contact Number'></Input>
                 </Form.Item>
-                <Form.Item name='mövzu' className=''>
+                <Form.Item className={classes.submitInput} name='mövzu'>
+                  Mövzu
                   <Input placeholder='Mövzu seçin'></Input>
                 </Form.Item>
 
-                <Form.Item name='message' className=''>
+                <Form.Item
+                  className={`${classes.submitInput} w-100`}
+                  name='message'
+                >
+                  Mesajınız
                   <Input placeholder='Mesajınızı daxil edin.'></Input>
                 </Form.Item>
-              </div>
-              <div>
                 <Button className=' w-100' htmlType='submit'>
                   Submit <ArrowRight />
                 </Button>

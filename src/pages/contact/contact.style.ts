@@ -1,44 +1,46 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
 import { createUseStyles } from 'react-jss';
 import { rem } from 'assets/styles/abstracts/functions';
+import colors from 'assets/styles/abstracts/color';
 
 const styles = {
   overlay: {
-    width: "100%",
+    width: '100%',
     height: rem(552),
-    position: "absolute",
-    background: "#3e6f000a",
-    left:0,
+    position: 'absolute',
+    background: colors.contactBackground,
+    left: 0,
+    zIndex: '-1',
   },
   maps: {
     position: 'absolute',
     width: '100%',
     height: rem(440),
-    left:0
+    left: 0,
   },
   left: {
-    "& h1 ": {
-      color: "#414D44",
+    '& h1 ': {
+      color: colors.titleBlack,
       fontSize: rem(32),
-      fontStyle: "normal",
+      fontStyle: 'normal',
       fontWeight: 800,
-      margin: "20px 0px",
+      margin: '20px 0px',
     },
-    "& p ": {
+    '& p ': {
       fontSize: rem(22),
       fontWeight: 400,
       lineHeight: rem(35),
     },
   },
   leftTitle: {
-    "& h1 ": {
-      color: "#3E6F00",
+    '& h1 ': {
+      color: colors.contactTitleActive,
       fontSize: rem(60),
       fontWeight: 800,
       marginBottom: rem(24),
     },
-    "& p ": {
-      color: "#414D44",
+    '& p ': {
+      color: colors.contactTitleText,
       fontSize: rem(16),
       fontWeight: 400,
       lineHeight: rem(22),
@@ -46,17 +48,49 @@ const styles = {
   },
   submitForm: {
     marginTop: rem(24),
-    "& button ": {
+    '& button ': {
       borderRadius: rem(8),
-      background: "#3E6F00",
-      color: "#Fff",
-      border: "none",
-      padding: "12px 24px",
-      display: "flex",
-      flexDirection: "row",
-      alignItems: "center",
-      justifyContent: "center",
-      gap: "12px",
+      background: colors.titleGreen,
+      color: colors.light,
+      border: 'none',
+      display: 'flex',
+      flexDirection: 'row',
+      alignItems: 'center',
+      justifyContent: 'center',
+      gap: rem(12),
+    },
+  },
+  submitInput: {
+    width: '49%',
+  },
+  img: {
+    position: 'relative',
+
+    '& .top': {
+      zIndex: 1,
+      position: 'absolute',
+      left: rem(101),
+       '& img': {
+      position: 'absolute',
+      marginLeft: rem(0),
+    },
+    '& img:last-child': {
+      marginLeft: rem(279),
+      marginTop: rem(76),
+    },
+    },
+    '& .bottom': {
+      top: rem(172),
+      zIndex: 2,
+      position: 'absolute',
+      '& img': {
+        position: 'absolute',
+        marginLeft: rem(0),
+      },
+      '& img:last-child': {
+        marginLeft: rem(275),
+        marginTop: rem(96),
+      },
     },
   },
 };

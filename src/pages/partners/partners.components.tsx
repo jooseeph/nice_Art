@@ -1,29 +1,12 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
-import React, { useState } from 'react';
+import  { useState } from 'react';
 import { PartnersCard } from './partners';
-import { usePartnersStyle, usePartnersStyleCard } from './partners.style';
+import { usePartnersStyle } from './partners.style';
 import { generateGuid } from 'core/helpers/generate-guid';
 import { ArrowRight } from 'assets/images/icons/arrows';
 import colors from 'assets/styles/abstracts/color';
+import PartnersCardComponent  from './components/partnersCard.component'
 
-const PartnersCardComponent = ({
-  imageSrc,
-  title,
-  description,
-  text,
-  onClick,
-}: PartnersCard & { onClick: () => void }) => {
-  const classes = usePartnersStyleCard();
-  return (
-    <div className={`col-lg-3 col-sm-6 ${classes.card}`} onClick={onClick}>
-      <div className={` ${classes.imageAndTitle}`}>
-        <img src={imageSrc} alt={title} />
-        <h2 className={classes.title}>{title}</h2>
-      </div>
-      <p className={classes.description}>{description}</p>
-    </div>
-  );
-};
 export const PartnersComponent = () => {
   const cardsData = [
     {
@@ -92,7 +75,7 @@ export const PartnersComponent = () => {
           </button>
         </div>
       </div>
-      <div className='row'>
+      <div className='row mb-150 '>
         {cardsData.map(card => (
           <PartnersCardComponent
             key={generateGuid()}
@@ -101,6 +84,7 @@ export const PartnersComponent = () => {
           />
         ))}
       </div>
+
       {selectedCard && (
         <div className={classes.modalOverlay} onClick={handleCloseModal}>
           <div
@@ -109,21 +93,21 @@ export const PartnersComponent = () => {
           >
             <div className='col-12'>
               <div className='row'>
-                <div className='col-2 p-0 '>
+                <div>
                   <img
-                    style={{ width: 60, marginRight: 20 }}
+                    style={{ width: 60, height: 60 }}
                     src={selectedCard.imageSrc}
                     alt={selectedCard.title}
                   />
                 </div>
-                <div className='col-10 p-0 mt-10'>
+                <div className='ml-20 mt-10 mb-20'>
                   <h2>{selectedCard.title}</h2>
                   <h3>{selectedCard.description}</h3>
                 </div>
               </div>
             </div>
-            <p>{selectedCard.text}</p>
-            <div className='col-12 p-0'>
+            <p style={{ padding: 4 }}>{selectedCard.text}</p>
+            <div className='col-12 p-0 '>
               <div className='row justify-start'>
                 <div className='col-6'>
                   <button className={`btn btn-block w-100 ${classes.mainBtn}`}>
@@ -132,7 +116,15 @@ export const PartnersComponent = () => {
                 </div>
 
                 <div className='col-6'>
-                  <button className={`btn btn-block w-100 ${classes.mainBtn}`}>
+                  <button
+                    style={{
+                      backgroundColor: colors.light,
+                      color: colors.titleGreen,
+                      border: '1px solid green',
+                    }}
+                    onClick={handleCloseModal}
+                    className={`btn btn-block w-100 ${classes.mainBtn}`}
+                  >
                     Close
                   </button>
                 </div>
