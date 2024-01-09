@@ -7,10 +7,18 @@ const styles = {
   productItem: {
     position: 'relative',
     background: colors.backgroundProductI,
-    padding: `${rem(40) + ' ' + rem(0) + ' ' + rem(0) + ' ' + rem(40)}`,
+    padding: `${rem(40) + ' ' + rem(0) + ' ' + rem(40) + ' ' + rem(40)}`,
     marginTop: rem(40),
     '&:first-child': {
       marginTop: rem(60),
+    },
+    '&:last-child': {
+      marginBottom: rem(200) + '!important',
+    },
+    '@media (max-width: 768px)': {
+      '&:last-child': {
+        marginBottom: rem(90) + '!important',
+      },
     },
     '@media (max-width:1200px)': {
       padding: `${rem(40) + ' ' + rem(0) + ' ' + rem(40) + ' ' + rem(40)}`,

@@ -4,13 +4,13 @@ import { rem } from "assets/styles/abstracts/functions";
 import { createUseStyles } from "react-jss";
 
 const style = {
-  productDetailSec: { zIndex: "999" },
+  productDetailSec: { zIndex: "999"},
   overlay: {
     position: "absolute",
     top: 0,
     left: 0,
     width: "100%",
-    height: rem(575),
+    height: rem(659),
     backgroundColor: "#FAFFF3",
     zIndex: "-1",
     "@media (max-width: 768px)": {

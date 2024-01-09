@@ -5,11 +5,17 @@ export const az = {
   terms: 'Terms and Conditions',
   privacy: 'Privacy Policy',
   // left menu
+
+  companyInformation:
+    'Lorem ipsum dolor sit amet consectetur adipiscing elit aliquam',
+  // Nav menu
   home_title: 'Ana səhifə',
   about_title: 'Haqqımızda',
   product_title: 'Məhsullar',
   partners_title: 'Partnyorlar',
   contact_title: 'Əlaqə',
+  //Footer Menu
+  location: 'Location of company',
   // errors
   input_required: 'Bu xana mütləqdir',
   input_min_length: 'Ən azı {min} simvol olmalıdır',
@@ -21,6 +27,10 @@ export const az = {
   //product
   productDetailBtn: 'Apply loan',
   credit_about: 'Kredit Haqqında',
+  productTitle: 'Title for Products or Lorem Ipsum motto',
+  productDescTitle: 'Lectus mauris pulvinarsit?',
+  productDescription:
+    'Vehicula elit est, neque non mattis pharetra, urna lectus magnis. Ultricies tellus adipiscing a sem ultrices eu pulvinar. Urna egestas est aliquet facilisis elit sit. Massa libero turpis facilisi mattis sit ac consectetur malesuada et. Urna, orci arcu senectus mattis nam euismod cum cursus. Enim nunc quis commodo leo libero diam.',
   //homepage
   header_title: 'We help you find the perfect loan',
   header_text:
