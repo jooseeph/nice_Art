@@ -6,7 +6,10 @@ import Image2 from 'assets/images/statics/contactPhoto2.svg';
 import Image3 from 'assets/images/statics/contactPhoto3.svg';
 import Image4 from 'assets/images/statics/contactPhoto4.svg';
 import { useContact } from './actions/contact.query';
+import useLocalization from 'assets/lang';
 const ContactComponent = () => {
+  const translate = useLocalization();
+
   const classes = useContactStyle();
   const initialValues = {
     email: '',
@@ -23,22 +26,17 @@ const ContactComponent = () => {
     <div className='container'>
       <div className='row'>
         <div className={`left col-lg-5  col-sm-12 ${classes.left}`}>
-          <h1 style={{ fontWeight: '60px' }}>DISCOVER US</h1>
-          <p>
-            Flick is here to help you; Our experts are available to answer any
-            questions you might have. We’ve got the answers.
-          </p>
-          <h1>Visit Us</h1>
-          <p>
-            Office no. G-02. Building 1, Ground Floor. Dubai Media City – Dubai
-          </p>
+          <h1 style={{ fontWeight: '60px' }}>{translate('contactTitle')}</h1>
+          <p>{translate('contactText')}</p>
+          <h1> {translate('contactTitleSecond')}</h1>
+          <p>{translate('contactTextSecond')}</p>
           <br />
           <br />
-          <p>Feel free to get in touch with us through our channels:</p>
-          <h1>Email US</h1>
-          <p>javidan.nasib@gmai.com</p>
-          <h1>Call US</h1>
-          <p>+994 51 535 11 35</p>
+          <p>{translate('contactTextThird')}</p>
+          <h1>{translate('contactEmail')} </h1>
+          <p>{translate('contactEmailText')}</p>
+          <h1>{translate('contactCall')}</h1>
+          <p>{translate('contactCallText')}</p>
         </div>
         <div className={` col-lg-7 col-sm-12 ${classes.img}`}>
           <div className='column top'>
@@ -58,15 +56,8 @@ const ContactComponent = () => {
           style={{ paddingTop: '70px', paddingBottom: '80px' }}
         >
           <div className={` col-lg-6 col-sm-12  ${classes.leftTitle}`}>
-            <h1>Have a project! Let’s diascuss </h1>
-            <p>
-              Vehicula elit est, neque non mattis pharetra, urna lectus magnis.
-              Ultricies tellus adipiscing a sem ultrices eu pulvinar. Urna
-              egestas est aliquet facilisis elit sit. Massa libero turpis
-              facilisi mattis sit ac consectetur malesuada et. Urna, orci arcu
-              senectus mattis nam euismod cum cursus. Enim nunc quis commodo leo
-              libero diam.
-            </p>
+            <h1>{translate('contactFormTitle')}</h1>
+            <p>{translate('contactFormText')}</p>
           </div>
 
           <div className={`col-lg-6 col-sm-12  pl-75 ${classes.submitForm}`}>

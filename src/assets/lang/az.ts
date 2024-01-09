@@ -71,4 +71,19 @@ export const az = {
   partnersText:
     'Commodo interdum at lorem eget amet placerat nunc posuere. Viverra lacus, nisl cursus senectus malesuada leo donec pellentesque. Id faucibus nulla adipiscing pellentesque vulputate quis pulvinar. Sapien est vestibulum in porttitor volutpat.',
   partnersButton: 'Became a partner',
+  //contact
+  contactTitle: 'DISCOVER US',
+  contactText:
+    'Flick is here to help you; Our experts are available to answer any questions you might have. Weve got the answers. ',
+  contactTitleSecond: 'Visit Us',
+  contactTextSecond:
+    'Office no. G-02. Building 1, Ground Floor. Dubai Media City – Dubai',
+  contactTextThird: 'Feel free to get in touch with us through our channels: ',
+  contactEmail: 'Email US',
+  contactEmailText: 'javidan.nasib@gmail.com',
+  contactCall: 'Call US',
+  contactCallText: '+994 51 535 11 35',
+  contactFormTitle: 'Have a project! Let’s diascuss ',
+  contactFormText:
+    'Vehicula elit est, neque non mattis pharetra, urna lectus magnis. Ultricies tellus adipiscing a sem ultrices eu pulvinar. Urna egestas est aliquet facilisis elit sit. Massa libero turpis facilisi mattis sit ac consectetur malesuada et. Urna, orci arcu senectus mattis nam euismod cum cursus. Enim nunc quis commodo leo libero diam. ',
 };
