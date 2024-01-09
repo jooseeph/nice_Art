@@ -1,9 +1,11 @@
 export const az = {
-  rights: 'Javıdan Nasıb',
-  copyright: 'Copyrıght',
-  organisation: 'All Rıghts Reserved',
-  terms: 'Terms and Condıtıons',
-  privacy: 'Prıvacy Polıcy',
+  rights: 'Javidan Nasib',
+  copyright: 'Copyright',
+  organisation: 'All Rights Reserved',
+  terms: 'Terms and Conditions',
+  privacy: 'Privacy Policy',
+  // left menu
+
   companyInformation:
     'Lorem ipsum dolor sit amet consectetur adipiscing elit aliquam',
   // Nav menu
@@ -48,15 +50,25 @@ export const az = {
   applyLoan: 'Apply to loan',
   loanTitle: 'Id duis id turpis mi quisque. Nulla.',
   loanmainContent:
-    "Malesuada tortor fringilla ut faucibus. Urna tellus lectus platea turpis non. Tellus odio eu ante tincidunt vivamus nunc nibh arcu,augue.",
-  loanAmount: "Kreditin məbləği",
-  azn: "AZN",
-  loanTime: "Kreditin müddəti",
-  month: "Ay",
-  rate: "Faiz dərəcəsi",
-  payment: "Aylıq ödəniş",
-  fin: "FIN code",
-  phone: "Əlaqə nömrəsi",
-  agreement: "AKB RAZILIQ vəriləsi üçün icazə",
-  submit: "Müraciət et",
+    'Malesuada tortor fringilla ut faucibus. Urna tellus lectus platea turpis non. Tellus odio eu ante tincidunt vivamus nunc nibh arcu,augue.',
+  loanAmount: 'Kreditin məbləği',
+  azn: 'AZN',
+  loanTime: 'Kreditin müddəti',
+  month: 'Ay',
+  rate: 'Faiz dərəcəsi',
+  payment: 'Aylıq ödəniş',
+  fin: 'FIN code',
+  phone: 'Əlaqə nömrəsi',
+  agreement: 'AKB RAZILIQ vəriləsi üçün icazə',
+  submit: 'Müraciət et',
+  //about
+  who_are_us: 'Biz kimik?',
+  our_purpose: 'Məqsədimiz',
+  our_strategy: 'Strategiyamız',
+  //partners
+  partnersTitle: 'Title for Partners or Lorem Ipsum motto',
+  partnersTitleSecond: 'Lectus mauris pulvinar',
+  partnersText:
+    'Commodo interdum at lorem eget amet placerat nunc posuere. Viverra lacus, nisl cursus senectus malesuada leo donec pellentesque. Id faucibus nulla adipiscing pellentesque vulputate quis pulvinar. Sapien est vestibulum in porttitor volutpat.',
+  partnersButton: 'Became a partner',
 };
