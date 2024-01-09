@@ -13,7 +13,7 @@ const styles = {
     left: 0,
     zIndex: '-1',
     [breakpoint(991)]: {
-      height: rem(800),
+      height: rem(850),
     },
   },
   maps: {
