@@ -6,24 +6,27 @@ import { createUseStyles } from "react-jss";
 const styles = {
   item: {
     marginRight: rem(40),
-    "&:last-child": { marginRight: rem(0) },
+    '&:last-child': { marginRight: rem(0) },
   },
   itemText: {
     fontFanily: fonts.font,
     fontSize: rem(16),
-    fontWeight: "700",
+    fontWeight: '500',
     color: colors.navText,
     lineHeight: rem(22),
-    "&:hover": {
-      color: colors.navActiveText,
-    },
-    "&:active": {
+    '&:hover': {
       color: colors.navActiveText,
     },
   },
   link: {
-    textDecoration: "none",
+    textDecoration: 'none',
+    '&.active': {
+      '& $itemText': {
+        color: colors.navActiveText,
+        },
+      },
   },
+  active: {},
 };
 
 export const useNavMenuItemStyles = createUseStyles(styles);
