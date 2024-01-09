@@ -9,6 +9,8 @@ const stylesCard = {
     boxShadow: '0px 0px 4px 0px #3e6f000a',
     borderRadius: rem(16),
     border: '1px solid rgba(62, 111, 0, 0.02)',
+  
+
     '&:last-child': { marginRight: rem(0) },
 
     '& p': {
@@ -29,6 +31,9 @@ const stylesCard = {
     marginBottom: rem(36),
 
     '& h2': { marginLeft: 12 },
+    '& img': {
+      width: rem(32),
+    },
   },
 
   title: {

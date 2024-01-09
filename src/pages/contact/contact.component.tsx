@@ -1,12 +1,22 @@
 import { Button, Form, Input } from 'antd';
 import { useContactStyle } from './contact.style';
 import { ArrowRight } from 'assets/images/icons/arrows';
-
+import Image1 from 'assets/images/statics/contactPhoto1.svg';
+import Image2 from 'assets/images/statics/contactPhoto2.svg';
+import Image3 from 'assets/images/statics/contactPhoto3.svg';
+import Image4 from 'assets/images/statics/contactPhoto4.svg';
+import { useContact } from './actions/contact.query';
 const ContactComponent = () => {
   const classes = useContactStyle();
   const initialValues = {
     email: '',
     phone: '',
+  };
+
+  const mutation = useContact();
+
+  const onFinish = values => {
+    mutation.mutate(values);
   };
 
   return (
@@ -32,32 +42,20 @@ const ContactComponent = () => {
         </div>
         <div className={` col-lg-7 col-sm-12 ${classes.img}`}>
           <div className='column top'>
-            <img
-              src='/src/assets/images/statics/contactPhoto1.svg'
-              alt='Image 1'
-            />
-            <img className='specialImage'
-              src='/src/assets/images/statics/contactPhoto2.svg'
-              alt='Image 2'
-            />
+            <img src={Image1} alt='Image 1' />
+            <img className='specialImage' src={Image2} alt='Image 2' />
           </div>
           <div className='column bottom '>
-            <img
-              src='/src/assets/images/statics/contactPhoto3.svg'
-              alt='Image 3'
-            />
-            <img
-              src='/src/assets/images/statics/contactPhoto4.svg'
-              alt='Image 4'
-            />
+            <img src={Image3} alt='Image 3' />
+            <img src={Image4} alt='Image 4' />
           </div>
         </div>
       </div>
-      <section className='formSection col-sm-12'>
+      <section className={`col-sm-12 ${classes.form}`}>
         <div className={classes.overlay}></div>
         <div
           className='row '
-          style={{ paddingTop: '120px', paddingBottom: '80px' }}
+          style={{ paddingTop: '70px', paddingBottom: '80px' }}
         >
           <div className={` col-lg-6 col-sm-12  ${classes.leftTitle}`}>
             <h1>Have a project! Let’s diascuss </h1>
@@ -72,7 +70,12 @@ const ContactComponent = () => {
           </div>
 
           <div className={`col-lg-6 col-sm-12  pl-75 ${classes.submitForm}`}>
-            <Form name='login' initialValues={initialValues} layout='vertical'>
+            <Form
+              onFinish={onFinish}
+              name='login'
+              initialValues={initialValues}
+              layout='vertical'
+            >
               <div className={`row justify-between`}>
                 <Form.Item className={classes.submitInput} name='email'>
                   Ad Soyad

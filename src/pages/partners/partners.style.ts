@@ -1,5 +1,6 @@
 import { createUseStyles } from 'react-jss';
 import { rem } from 'assets/styles/abstracts/functions';
+import { breakpoint } from 'assets/styles/abstracts/mixins';
 
 const styles = {
   title: { display: 'flex', marginBottom: rem(60) },
@@ -14,14 +15,20 @@ const styles = {
       fontSize: rem(36),
     },
   },
-  right: {},
+  right: {
+    paddingLeft: rem(100),
+    [breakpoint(991)]: {
+      paddingLeft: rem(0),
+    },
+  },
   rightTitle: {
     color: '#414D44',
     fontSize: '44px',
     fontStyle: 'normal',
     fontWeight: '800',
     lineHeight: 'normal',
-    '@media (max-width: 768px)': {
+
+    [breakpoint(991)]: {
       display: 'none',
     },
   },
@@ -31,7 +38,7 @@ const styles = {
     fontSize: '16px',
     fontStyle: 'normal',
     fontWeight: '400',
-    lineHeight: '22px' ,
+    lineHeight: '22px',
   },
   mainBtn: {
     borderRadius: '8px',
@@ -62,7 +69,6 @@ const styles = {
     backgroundColor: '#fff',
     width: rem(660),
     display: 'flex',
-
 
     padding: rem(32),
     borderRadius: rem(8),

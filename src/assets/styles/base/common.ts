@@ -11,7 +11,6 @@ const commonStyles = {
             margin: 0,
             padding:0,
         },
-        img: {maxWidth: '100%',},
     },
 };
 
