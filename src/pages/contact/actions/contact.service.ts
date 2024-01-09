@@ -13,17 +13,16 @@ export const postContactService = formData => {
       },
     })
     .then(response => {
-      console.log('Post işlemi başarıyla gerçekleşti:', response.data);
+      console.log('Məlumat post edildi:', response.data);
       return response.data;
     })
     .catch(error => {
-      console.error('Post işlemi başarısız oldu:', error);
+      console.error('Məlumat post edilərkən xəta baş verdi:', error);
 
-      // Hata durumunda response olmayabilir, bu nedenle kontrol ekleniyor
       if (error.response) {
         console.error('Response data:', error.response.data);
       }
 
-      throw new Error('Bir hata oluştu');
+      throw new Error('Bir xəta baş verdi');
     });
 };

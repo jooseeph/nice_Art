@@ -60,45 +60,45 @@ const ContactComponent = () => {
             <p>{translate('contactFormText')}</p>
           </div>
 
-          <div className={`col-lg-6 col-sm-12  pl-75 ${classes.submitForm}`}>
-            <Form
-              onFinish={onFinish}
-              name='login'
-              initialValues={initialValues}
-              layout='vertical'
-            >
-              <div className={`row justify-between`}>
-                <Form.Item className={classes.submitInput} name='email'>
-                  Ad Soyad
-                  <Input placeholder='Enter your username or email address' />
-                </Form.Item>
-                <Form.Item className={classes.submitInput} name='email'>
-                  E-poçt
-                  <Input placeholder='Enter your username or email address' />
-                </Form.Item>
+            <div className={`col-lg-6 col-sm-12  pl-75 ${classes.submitForm}`}>
+              <Form
+                onFinish={onFinish}
+                name='login'
+                initialValues={initialValues}
+                layout='vertical'
+              >
+                <div className={`row justify-between`}>
+                  <Form.Item className={classes.submitInput} name='email'>
+                    Ad Soyad
+                    <Input placeholder='Enter your username or email address' />
+                  </Form.Item>
+                  <Form.Item className={classes.submitInput} name='email'>
+                    E-poçt
+                    <Input placeholder='Enter your username or email address' />
+                  </Form.Item>
 
-                <Form.Item className={classes.submitInput} name='phone'>
-                  Əlaqə nömrəsi
-                  <Input placeholder='Contact Number'></Input>
-                </Form.Item>
-                <Form.Item className={classes.submitInput} name='mövzu'>
-                  Mövzu
-                  <Input placeholder='Mövzu seçin'></Input>
-                </Form.Item>
+                  <Form.Item className={classes.submitInput} name='phone'>
+                    Əlaqə nömrəsi
+                    <Input placeholder='Contact Number'></Input>
+                  </Form.Item>
+                  <Form.Item className={classes.submitInput} name='mövzu'>
+                    Mövzu
+                    <Input placeholder='Mövzu seçin'></Input>
+                  </Form.Item>
 
-                <Form.Item
-                  className={`${classes.submitInput} w-100`}
-                  name='message'
-                >
-                  Mesajınız
-                  <Input placeholder='Mesajınızı daxil edin.'></Input>
-                </Form.Item>
-                <Button className=' w-100' htmlType='submit'>
-                  Submit <ArrowRight />
-                </Button>
-              </div>
-            </Form>
-          </div>
+                  <Form.Item
+                    className={`${classes.submitInput} w-100`}
+                    name='message'
+                  >
+                    Mesajınız
+                    <Input placeholder='Mesajınızı daxil edin.'></Input>
+                  </Form.Item>
+                  <Button className=' w-100' htmlType='submit'>
+                    Submit <ArrowRight />
+                  </Button>
+                </div>
+              </Form>
+            </div>
         </div>
       </section>
 
