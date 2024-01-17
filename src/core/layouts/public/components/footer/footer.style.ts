@@ -110,6 +110,7 @@ const styles = {
     marginBottom: rem(42),
     fontWeight: '700',
     lineHeight: rem(22),
+    color: colors.navText,
   },
   footerTxt: {
     fontFamily: fonts.font,

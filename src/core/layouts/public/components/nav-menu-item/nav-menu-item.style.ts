@@ -1,7 +1,7 @@
-import colors from "assets/styles/abstracts/color";
-import fonts from "assets/styles/abstracts/fonts";
-import { rem } from "assets/styles/abstracts/functions";
-import { createUseStyles } from "react-jss";
+import colors from 'assets/styles/abstracts/color';
+import fonts from 'assets/styles/abstracts/fonts';
+import { rem } from 'assets/styles/abstracts/functions';
+import { createUseStyles } from 'react-jss';
 
 const styles = {
   item: {
@@ -20,13 +20,12 @@ const styles = {
   },
   link: {
     textDecoration: 'none',
-    '&.active': {
-      '& $itemText': {
-        color: colors.navActiveText,
-        },
-      },
   },
-  active: {},
+  active: {
+    '& $itemText': {
+      color: colors.navActiveText,
+    },
+  },
 };
 
 export const useNavMenuItemStyles = createUseStyles(styles);

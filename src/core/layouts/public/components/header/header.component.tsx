@@ -7,7 +7,9 @@ const HeaderComponent = () => {
 
   return (
     <div className={classes.header}>
-      <HeaderNavbarComponent />
+      <div className='container'>
+        <HeaderNavbarComponent />
+      </div>
     </div>
   );
 };

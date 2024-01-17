@@ -89,7 +89,7 @@ const FooterComponent = () => {
                 <div className='row justify-end'>
                   <div className='col-md-12 justify-end'>
                     <div className='row justify-end'>
-                      <div className='col-4 justify-end'>
+                      <div className='col-4 col-lg-6 justify-end'>
                         <h2 className={classes.footHeading}>Site</h2>
                         <ul className='list-unstyled'>
                           <li>
@@ -134,7 +134,7 @@ const FooterComponent = () => {
                           </li>
                         </ul>
                       </div>
-                      <div className='col-8 justify-end'>
+                      <div className='col-8 col-lg-6 justify-end'>
                         <h2 className={classes.footHeading}>Contacts US</h2>
                         <ul className='list-unstyled'>
                           <li>
@@ -177,22 +177,29 @@ const FooterComponent = () => {
           </div>
         </div>
         <div className='container'>
-          <div className={`row align-center ${classes.marginToprights}`}>
-            <div className={`${classes.copyRight} col-12 col-md-6`}>
-              {translate('copyright')} © {date} {translate('rights')}.
-            </div>
-            <div
-              className={`${classes.copyRight} col-12 col-md-6 text-md-right text-left`}
-            >
-              <span>{translate('organisation')}</span>
-              <span className={classes.verticalLine}>|</span>
-              <NavLink to={Routes.about} className={classes.rightReserv}>
-                {translate('terms')}
-              </NavLink>
-              <span className={classes.verticalLine}>|</span>
-              <NavLink to={Routes.about} className={`${classes.rightReserv}`}>
-                {translate('privacy')}
-              </NavLink>
+          <div className={`${classes.marginToprights}`}>
+            <div className='row align-center'>
+              <div className='col-12 col-md-6'>
+                <div className={`${classes.copyRight}`}>
+                  {translate('copyright')} © {date} {translate('rights')}.
+                </div>
+              </div>
+              <div className='col-12 col-md-6'>
+                <div className={`${classes.copyRight}`}>
+                  <span>{translate('organisation')}</span>
+                  <span className={classes.verticalLine}>|</span>
+                  <NavLink to={Routes.about} className={classes.rightReserv}>
+                    {translate('terms')}
+                  </NavLink>
+                  <span className={classes.verticalLine}>|</span>
+                  <NavLink
+                    to={Routes.about}
+                    className={`${classes.rightReserv}`}
+                  >
+                    {translate('privacy')}
+                  </NavLink>
+                </div>
+              </div>
             </div>
           </div>
         </div>

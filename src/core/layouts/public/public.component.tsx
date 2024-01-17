@@ -9,11 +9,9 @@ const PublicComponent = () => {
 
   return (
     <div className={classes.public}>
-      <div className="container">
-        <HeaderComponent />
-        <div className={classes.content}>
-          <Outlet />
-        </div>
+      <HeaderComponent />
+      <div className={classes.content}>
+        <Outlet />
       </div>
       <FooterComponent />
     </div>
